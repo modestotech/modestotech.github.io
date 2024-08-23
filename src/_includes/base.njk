@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title | safe }}</title>
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-  <header>
-    <h1>{{ title | safe }}</h1>
-  </header>
-  <main>
-    {{ content | safe }}
-  </main>
-  <footer>
-    <p>&copy; Modesto Software {% year %}</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Modesto Software</title>
+    <link href="/output.css" rel="stylesheet">
+    <script type="module" src="/js/theme-toggle.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-base-200">
+      <div class="navbar px-3 py-2 sm:px-6 sm:py-4 flex flex-wrap items-center justify-between">
+        <div class="flex flex-wrap items-center space-x-2 sm:space-x-4">
+          <a href="/" class="btn btn-sm sm:btn-md btn-primary">Home</a>
+          <a href="/resume" class="btn btn-sm sm:btn-md btn-primary">Resume</a>
+        </div>
+        <div class="flex-none space-x-2 sm:space-x-4">
+          <!-- Theme Dropdown -->
+          <input type="checkbox" class="toggle toggle-sm sm:toggle-md" id="theme-toggle"/>
+
+          <div class="avatar">
+            <div class="w-10 sm:w-12 rounded">
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 container mx-auto p-4 prose">
+      {{ content | safe }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-base-200 p-4 text-center shadow-md">
+      <p>© 2024 Modesto Software AB. All rights reserved.</p>
+    </footer>
+
+  </body>
 </html>
