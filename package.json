@@ -1,0 +1,15 @@
+{
+  "name": "modesto-software",
+  "version": "1.0.0",
+  "description": "Modesto Software Static Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "author": "Max Modesto Wallin",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
