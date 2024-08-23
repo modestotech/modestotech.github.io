@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # Build artifacts
-public
+_site
 
 # User-specific files
 *.rsuser
