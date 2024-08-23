@@ -1,6 +1,7 @@
 ---
 title: Resume
 layout: resume.njk
+permalink: false
 ---
 
 # Max Modesto Wallin
