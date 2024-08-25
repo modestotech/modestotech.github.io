@@ -11,22 +11,51 @@
 
     <!-- Header -->
     <header class="bg-base-200">
-      <div class="navbar px-3 py-2 sm:px-6 sm:py-4 flex flex-wrap items-center justify-between">
-        <div class="flex flex-wrap items-center space-x-2 sm:space-x-4">
-          <a href="/" class="btn btn-sm sm:btn-md btn-primary">Home</a>
-          {# <a href="/resume" class="btn btn-sm sm:btn-md btn-primary">Resume</a> #}
-        </div>
-        <div class="flex-none space-x-2 sm:space-x-4">
-          <!-- Theme Dropdown -->
-          <input type="checkbox" class="toggle toggle-sm sm:toggle-md" id="theme-toggle"/>
+      <div class="navbar px-3 md:px-4">
 
-          <div class="avatar">
-            <div class="w-10 sm:w-12 rounded">
-              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+        <!-- Desktop menu -->
+        <div class="navbar-start hidden md:flex flex-wrap items-center justify-between py-2 sm:py-4">
+          <div class="hidden md:flex flex-wrap items-center space-x-4">
+            {% for menuItem in menuItems %}
+              <a href="{{ menuItem.link }}" class="btn btn-sm sm:btn-md btn-primary">{{ menuItem.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="navbar-start md:hidden">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-square btn-ghost hover:bg-gray-500 hover:text-gray-100 transition duration-200 ease-in-out">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu dropdown-content mt-2 p-2 shadow bg-base-300 rounded-box w-52 border border-gray-300">
+              {% for menuItem in menuItems %}
+                <li>
+                  <a href="{{ menuItem.link }}">{{ menuItem.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Theme toggle and logo -->
+        <div class="navbar-end">
+          <div class="flex items-center space-x-3 sm:space-x-5">
+            <!-- Theme Toggle -->
+            <label for="theme-toggle" class="sr-only">Toggle Theme</label>
+            <input type="checkbox" class="toggle toggle-sm md:toggle-md" id="theme-toggle"/>
+
+            <!-- Company Logo -->
+            <div class="avatar">
+              <div class="w-10 sm:w-12 rounded">
+                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Company Logo"/>
+              </div>
             </div>
           </div>
-
         </div>
+
       </div>
     </header>
 
