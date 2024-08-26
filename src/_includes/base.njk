@@ -7,14 +7,15 @@
     <link href="/output.css" rel="stylesheet">
     <script type="module" src="/js/theme-toggle.js"></script>
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="flex flex-col min-h-screen">
 
     <!-- Header -->
     <header class="bg-base-200">
       <div class="navbar px-3 md:px-4">
 
         <!-- Desktop menu -->
-        <div class="navbar-start hidden md:flex flex-wrap items-center justify-between py-2 sm:py-4">
+        <div class="navbar-start hidden md:flex flex-wrap items-center justify-between
+                    py-2 sm:py-3">
           <div class="hidden md:flex flex-wrap items-center space-x-4">
             {% for menuItem in menuItems %}
               <a href="{{ menuItem.link }}" class="btn btn-sm sm:btn-md btn-primary">{{ menuItem.name }}</a>
@@ -48,11 +49,9 @@
             <input type="checkbox" class="toggle toggle-sm md:toggle-md" id="theme-toggle"/>
 
             <!-- Company Logo -->
-            <div class="avatar">
-              <div class="w-10 sm:w-12 rounded">
-                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Company Logo"/>
-              </div>
-            </div>
+            <a href="/" class="flex items-center">
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Company Logo" class="w-10 md:w-14 h-auto"/>
+            </a>
           </div>
         </div>
 
@@ -60,8 +59,10 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="flex-1 container mx-auto p-4 prose">
-      {{ content | safe }}
+    <main class="flex-grow flex justify-center">
+      <div class="w-10/12 md:w-8/12 p-4 md:p-6">
+        {{ content | safe }}
+      </div>
     </main>
 
     <!-- Footer -->
