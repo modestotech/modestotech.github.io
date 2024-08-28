@@ -11,11 +11,10 @@
 
     <!-- Header -->
     <header class="bg-base-200">
-      <div class="navbar px-3 md:px-4">
+      <div class="navbar pl-1 pr-4 md:px-6">
 
         <!-- Desktop menu -->
-        <div class="navbar-start hidden md:flex flex-wrap items-center justify-between
-                    py-2 sm:py-3">
+        <div class="navbar-start hidden md:flex flex-wrap items-center justify-between py-2">
           <div class="hidden md:flex flex-wrap items-center space-x-4">
             {% for menuItem in menuItems %}
               <a href="{{ menuItem.link }}" class="btn btn-sm sm:btn-md btn-primary">{{ menuItem.name }}</a>
@@ -43,14 +42,15 @@
 
         <!-- Theme toggle and logo -->
         <div class="navbar-end">
-          <div class="flex items-center space-x-3 sm:space-x-5">
+          <div class="flex items-center space-x-3 md:space-x-6">
             <!-- Theme Toggle -->
             <label for="theme-toggle" class="sr-only">Toggle Theme</label>
             <input type="checkbox" class="toggle toggle-sm md:toggle-md" id="theme-toggle"/>
 
             <!-- Company Logo -->
             <a href="/" class="flex items-center">
-              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Company Logo" class="w-10 md:w-14 h-auto"/>
+              <img src="/images/logo_dark.png" alt="Company Logo" class="logo-dark w-10 md:w-14 h-auto"/>
+              <img src="/images/logo_light.png" alt="Company Logo" class="logo-light w-10 md:w-14 h-auto"/>
             </a>
           </div>
         </div>
