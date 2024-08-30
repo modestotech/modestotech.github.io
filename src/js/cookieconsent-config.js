@@ -1,4 +1,4 @@
-import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js';
+import '/js/cookieconsent.umd.js';
 
 /**
  * All config. options available here:
