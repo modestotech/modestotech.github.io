@@ -3,5 +3,9 @@
     {
         "name": "Home",
         "link": "/"
+    },
+    {
+        "name": "Resume",
+        "link": "/resume"
     }
 ]

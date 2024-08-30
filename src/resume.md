@@ -1,40 +1,8 @@
 ---
 title: Resume
 layout: resume.njk
-permalink: false
 ---
 
-# Max Modesto Wallin
+I am a seasoned software developer with over 6 years of professional experience, specializing in E-commerce and Fintech. My core expertise lies in **Azure** and **.NET**, and I am a certified **Azure Developer (AZ-204)**.
 
-The below is dummy data, will be fixed soon...
-
-A highly skilled web developer with a passion for creating dynamic and responsive web applications.
-
-## Experience
-
-### **Frontend Developer** at Awesome Company
-**Jan 2020 - Present**
-
-- Designed and developed responsive web applications using modern technologies like React, Tailwind CSS, and DaisyUI.
-- Collaborated with cross-functional teams to deliver high-quality software solutions.
-- Optimized applications for speed and scalability.
-
-### **Web Developer** at Cool Startup
-**Jun 2018 - Dec 2019**
-
-- Developed and maintained the company's website using HTML, CSS, JavaScript, and Tailwind CSS.
-- Worked closely with the design team to implement pixel-perfect UI components.
-
-## Skills
-
-- **Languages**: JavaScript, HTML, CSS, Python
-- **Frameworks**: React, Vue.js, Node.js
-- **Tools**: Git, Webpack, Docker
-
-## Education
-
-### **Bachelor of Science in Computer Science**
-**University of Tech**
-**2014 - 2018**
-
-Graduated with honors.
+Driven by a passion for continuous learning and growth, I actively seek new challenges to enhance my skills. My **positive** and **curious** mindset, coupled with **strong communication abilities**, empowers me to consistently contribute to teams and help them **exceed expectations**.

@@ -1,0 +1,104 @@
+{
+  "experiences": [
+    {
+      "position": "System Developer",
+      "company": "Avensia AB",
+      "allocation": "100%",
+      "type": "Permanent position",
+      "duration": {
+        "start": "2021-10",
+        "end": "2024-04"
+      },
+      "location": {
+        "city": "Helsingborg",
+        "country": "Sweden"
+      },
+      "responsibilities": [
+        "Development of e-commerce solutions on Avensia's Nitro product (based on Optimizely/Episerver CMS and Commerce)",
+        "Working with integrations including Klarna Checkout, Esales/Voyado Elevate indexing, inRiver PIM, Voyado CRM",
+        "Primary focus on backend stack using .NET (.NET Framework in older projects and modern .NET in newer)",
+        "Administrating CI/CD with TeamCity and Octopus",
+        "Working extensively with MSSQL server"
+      ],
+      "achievements": [
+        "Engaged in diverse client projects",
+        "Maintained great collaboration with clients and colleagues",
+        "Gained recognition as a technically competent developer",
+        "Known for delivering high-quality results"
+      ],
+      "skills": [
+        ".NET",
+        "C#",
+        "Azure",
+        "Docker",
+        "CI/CD",
+        "MSSQL",
+        "EPiServer",
+        "Optimizely",
+        "Teamcity",
+        "Octopus",
+        "React.js",
+        "JavaScript",
+        "Git",
+        "Scrum"
+      ]
+    },
+    {
+      "position": "Backend Developer",
+      "company": "Inyett AB",
+      "allocation": "100%",
+      "type": "Permanent position",
+      "duration": {
+        "start": "2019-02",
+        "end": "2021-10"
+      },
+      "location": {
+        "city": "Helsingborg",
+        "country": "Sweden"
+      },
+      "responsibilities": [
+        "Development on Inyet's SaaS solution for scanning and analyzing payments, to detect faults, frauds etc.",
+        "Mostly work on the BE parts (.NET/SQL) and and some limited FE work (AngularJS)",
+        "Introducing Scrum to the organization as the Scrum Master",
+        "Setting up and maintaining CI/CD with TeamCity and Octopus",
+        "Working extensively with MSSQL server, auditing execution plans, etc."
+      ],
+      "achievements": [
+        "Successfully worked with all parts of the product with different stakeholders",
+        "Participated in taking the solution from old-school .NET to modern cloud-based",
+        "Esteemed as a valuable and competent colleague",
+        "Known for delivering high-quality results"
+      ],
+      "skills": [
+        ".NET",
+        "C#",
+        "Azure",
+        "CI/CD",
+        "MSSQL",
+        "Teamcity",
+        "Octopus",
+        "React.js",
+        "Angular",
+        "JavaScript",
+        "Git",
+        "Scrum"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Microsoft Certified: Azure Developer Associate",
+      "issuingOrganization": "Microsoft",
+      "issueDate": "2023-01",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/MaxWallin-0718/FEA71CB95B51EEE5",
+      "skills": [".NET", "Microsoft Azure"]
+    },
+    {
+      "name": "Professional Scrum Master I",
+      "issuingOrganization": "Scrum.org",
+      "issueDate": "2019-05",
+      "url": "https://www.scrum.org/certificates/413818",
+      "skills": ["Scrum", "Agile"]
+    }
+  ]
+}

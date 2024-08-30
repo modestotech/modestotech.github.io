@@ -17,3 +17,32 @@
 [data-theme="light"] .logo-light {
   display: none;
 }
+
+/* Resume */
+.resume-not-dotted-list li {
+  @apply w-full mb-1 md:w-1/2;
+}
+
+.experience-sub-header {
+  @apply font-semibold mt-3 mb-1
+}
+
+.resume-section-header {
+  @apply text-xl font-semibold mb-3 md:mb-4
+}
+
+.resume-card {
+  @apply card bg-base-200 shadow-xl mb-8
+}
+
+.resume-card h3 {
+  @apply card-title text-xl mb-2
+}
+
+.attribute-list {
+  @apply flex flex-wrap list-disc list-inside space-y-1
+}
+
+.attribute-list .small {
+    @apply w-1/2 md:w-1/3 lg:w-1/5
+}
