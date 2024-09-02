@@ -18,9 +18,14 @@
   display: none;
 }
 
+/* Common */
+.page-title {
+  @apply text-2xl text-center font-bold mb-3 md:mb-5
+}
+
 /* Resume */
 .resume-not-dotted-list li {
-  @apply w-full mb-1 md:w-1/2;
+  @apply w-full mb-1 md:w-1/2
 }
 
 .experience-sub-header {

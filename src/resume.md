@@ -1,5 +1,6 @@
 ---
-title: Resume
+title: "Resume"
+pageHeader: "Resume"
 layout: resume.njk
 ---
 
