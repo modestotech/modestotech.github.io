@@ -17,6 +17,7 @@
     <title>{{ title }} | Modesto Software</title>
     <link href="/output.css" rel="stylesheet">
     <link href="/css/cookieconsent.css" rel="stylesheet">
+    <link href="/css/boxicons.min.css" rel="stylesheet">
 
     {% if css %}
       <link rel="stylesheet" href="{{css}}" />
@@ -50,12 +51,8 @@
         <!-- Mobile menu -->
         <div class="navbar-start md:hidden">
           <div class="dropdown">
-            <label tabindex="0" class="btn btn-square btn-ghost hover:bg-gray-500 hover:text-gray-100 transition duration-200 ease-in-out">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-              </svg>
-            </label>
-            <ul tabindex="0" class="menu dropdown-content mt-2 p-2 shadow bg-base-300 rounded-box w-52 border border-gray-300">
+            <div tabindex="0" role="button" class="btn"><i class="bx bx-menu bx-sm"></i></div>
+            <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-300 rounded-box w-52 border border-gray-300">
               {% for menuItem in menuItems %}
                 <li>
                   <a href="{{ menuItem.link }}">{{ menuItem.name }}</a>
