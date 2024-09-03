@@ -35,6 +35,8 @@ themeToggle.addEventListener("change", function () {
 
 function updateLogo(theme) {
   const logo = document.getElementById("navbar-logo");
+  logo.classList.add("hidden");
   var logoResource = theme === 'dark' ? "/images/logo_light.png" : "/images/logo_dark.png";
   logo.setAttribute("src", logoResource);
+  logo.classList.remove("hidden");
 }
