@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme="dark"] .logo-light {
-  display: block;
-}
-
-[data-theme="dark"] .logo-dark {
-  display: none;
-}
-
-[data-theme="light"] .logo-dark {
-  display: block;
-}
-
-[data-theme="light"] .logo-light {
-  display: none;
-}
-
 /* Common */
 .page-title {
   @apply text-2xl text-center font-bold mb-3 md:mb-5
