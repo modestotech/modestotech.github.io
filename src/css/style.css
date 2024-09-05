@@ -3,25 +3,29 @@
 @tailwind utilities;
 
 /* Common */
-.page-title {
+#page-title {
   @apply text-2xl text-center font-bold mb-3 md:mb-5
 }
 
 /* Resume */
 .resume-not-dotted-list li {
-  @apply w-full mb-1 md:w-1/2
+  @apply w-full sm:w-1/2 mb-1
 }
 
 .experience-sub-header {
   @apply font-semibold mt-3 mb-1
 }
 
+.resume-section {
+  @apply mt-6;
+}
+
 .resume-section h2:first-of-type {
-  @apply text-xl font-semibold mb-3 md:mb-4
+  @apply text-xl font-semibold mb-3
 }
 
 .resume-card {
-  @apply card bg-base-200 shadow-xl mb-8
+  @apply card card-compact bg-base-300 shadow-xl mb-8
 }
 
 .resume-card h3 {

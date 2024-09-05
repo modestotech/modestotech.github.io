@@ -1,8 +1,12 @@
-body {
-    font-family: Times New Roman, serif;
+header, footer, .ad-banner {
+    display: none;
 }
 
-header, footer, .ad-banner {
+#page-title {
+    margin-bottom: 0.5cm;
+}
+
+#print-button {
     display: none;
 }
 
@@ -12,7 +16,7 @@ header, footer, .ad-banner {
     padding: 0;
 }
 
-#main-container #first-resume-section {
+#main-container #resume-first-section {
     page-break-inside: auto;
 }
 
@@ -20,13 +24,13 @@ header, footer, .ad-banner {
     page-break-inside: avoid;
 }
 
-#profile-image {
-    width: 20%;
-    margin-left: 1cm;
+#profile-image-container {
+    margin-left: 0.5cm;
+    margin-right: 0.2cm;
 }
 
 .resume-section h2:first-of-type {
-    margin: 0.5cm 0 0 0;
+    margin: 0.3cm 0 0 0;
 }
 
 .experience-sub-header {
