@@ -28,7 +28,7 @@ layout: base.njk
     <div class="resume-card">
         <div class="card-body">
             <h3>{{ experience.position }} at {{ experience.company }}</h3>
-            <ul class="resume-not-dotted-list flex flex-wrap list-none">
+            <ul class="experience-details-not-dotted-list flex flex-wrap">
                 <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
                 <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
                 <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
@@ -45,7 +45,7 @@ layout: base.njk
             <h4 class="experience-sub-header">Achievements:</h4>
             <ul class="attribute-list">
                 {% for achievement in experience.achievements %}
-                <li class="w-full xl:w-1/2">{{ achievement }}</li>
+                <li class="big">{{ achievement }}</li>
                 {% endfor %}
             </ul>
 
@@ -68,6 +68,34 @@ layout: base.njk
 </div>
 
 <div class="resume-section">
+    <h2>🏅 Certifications</h2>
+    {% for certification in resumeData.certifications %}
+    <div class="resume-card">
+        <div class="card-body">
+            <h3>{{ certification.name }}</h3>
+            <div class="flex flex-col sm:flex-row justify-normal">
+                <div class="w-full sm:w-2/5">
+                    <ul class="certification-skills-not-dotted-list">
+                        <li><strong>Issuing Organization:</strong> {{ certification.issuingOrganization }}</li>
+                        <li><strong>Issue Date:</strong> {{ certification.issueDate }}</li>
+                        <li class="certificate-link"><strong>Certification link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500">Click here</a></li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <h4 class="experience-sub-header">Skills:</h4>
+                    <ul class="attribute-list">
+                    {% for skill in certification.skills %}
+                        <li class="small">{{ skill }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="resume-section">
     <h2>🎓 Education</h2>
     {% for course in resumeData.education %}
     <div class="resume-card">
@@ -79,29 +107,6 @@ layout: base.njk
             <h4 class="experience-sub-header">Skills:</h4>
             <ul class="attribute-list">
                 {% for skill in course.skills %}
-                <li class="small">{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-<div class="resume-section">
-    <h2>🏅 Certifications</h2>
-    {% for certification in resumeData.certifications %}
-    <div class="resume-card">
-        <div class="card-body">
-            <h3>{{ certification.name }}</h3>
-            <ul class="resume-not-dotted-list list-none">
-                <li><strong>Issuing Organization:</strong> {{ certification.issuingOrganization }}</li>
-                <li><strong>Issue Date:</strong> {{ certification.issueDate }}</li>
-                <li><strong>Certification link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500">Click here</a></li>
-            </ul>
-
-            <h4 class="experience-sub-header">Skills:</h4>
-            <ul class="attribute-list">
-                {% for skill in certification.skills %}
                 <li class="small">{{ skill }}</li>
                 {% endfor %}
             </ul>

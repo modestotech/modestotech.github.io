@@ -2,6 +2,10 @@ header, footer, .ad-banner {
     display: none;
 }
 
+#cc-main {
+    display: none;
+}
+
 #page-title {
     margin-bottom: 0.5cm;
 }
@@ -16,21 +20,14 @@ header, footer, .ad-banner {
     padding: 0;
 }
 
-#main-container #resume-first-section {
-    page-break-inside: auto;
-}
-
-#main-container .resume-section {
-    page-break-inside: avoid;
-}
-
 #profile-image-container {
     margin-left: 0.5cm;
     margin-right: 0.2cm;
 }
 
-.resume-section h2:first-of-type {
+.resume-section h2 {
     margin: 0.3cm 0 0 0;
+    break-after: avoid;
 }
 
 .experience-sub-header {
@@ -40,9 +37,13 @@ header, footer, .ad-banner {
 .resume-card {
     all: unset; /* Removes all styling */
     display: block; /* Ensure it remains a block-level element */
-    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .card-body {
     padding: 0.3cm 0 0 0;
+}
+
+.certificate-link {
+    display: none;
 }
