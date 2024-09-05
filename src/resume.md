@@ -1,6 +1,8 @@
 ---
 title: "Resume"
-pageHeader: "Resume"
+pageHeader: "Max Modesto Wallin"
+image: "/images/profile.jpg"
+imageAlt: "Profile picture"
 layout: resume.njk
 ---
 
