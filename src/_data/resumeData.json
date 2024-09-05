@@ -87,7 +87,7 @@
       "issuingOrganization": "Microsoft",
       "issueDate": "2023-01",
       "url": "https://learn.microsoft.com/api/credentials/share/en-us/MaxWallin-0718/FEA71CB95B51EEE5",
-      "skills": [".NET", "Microsoft Azure"]
+      "skills": [".NET", "Azure", "Cloud"]
     },
     {
       "name": "Professional Scrum Master I",
@@ -118,7 +118,7 @@
         "start": "2012-06",
         "end": "2017-01"
       },
-      "skills": ["Linguistics", "Portuguese", "Brazilian Portuguese", "Comparative Literature", "Literary Theory"]
+      "skills": ["Linguistics", "Portuguese", "Brazilian Portuguese", "Comparative Literature"]
     },
     {
       "name": "App Developer: Android and iPhone",
@@ -129,7 +129,7 @@
         "start": "2012-06",
         "end": "2017-01"
       },
-      "skills": ["Mobile Applications", "Swift", "Java", "Kotlin", "IoT"]
+      "skills": ["Mobile Apps", "Swift", "Java", "Kotlin"]
     }
   ]
 }
