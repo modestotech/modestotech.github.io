@@ -1,0 +1,44 @@
+body {
+    font-family: Times New Roman, serif;
+}
+
+header, footer, .ad-banner {
+    display: none;
+}
+
+#main-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main-container #first-resume-section {
+    page-break-inside: auto;
+}
+
+#main-container .resume-section {
+    page-break-inside: avoid;
+}
+
+#profile-image {
+    width: 20%;
+    margin-left: 1cm;
+}
+
+.resume-section h2:first-of-type {
+    margin: 0.5cm 0 0 0;
+}
+
+.experience-sub-header {
+    margin: 0;
+}
+
+.resume-card {
+    all: unset; /* Removes all styling */
+    display: block; /* Ensure it remains a block-level element */
+    page-break-inside: avoid;
+}
+
+.card-body {
+    padding: 0.3cm 0 0 0;
+}

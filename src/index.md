@@ -1,7 +1,7 @@
 ---
 title: "Home"
 pageHeader: "Hi, I'm Max"
-image: "images/profile.jpg"
+image: "/images/profile.jpg"
 imageAlt: "Profile picture"
 layout: start.njk
 ---

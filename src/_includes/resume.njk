@@ -2,15 +2,26 @@
 layout: base.njk
 ---
 
-<div class="mb-4 md:mb-5 lg:mb-6 text-base space-y-4">{{ content | safe }}</div>
+<div class="flex flex-row items-start space-x-0 md:space-x-5">
+    <div class="flex-1 mb-4">
+        <div class="mb-4 md:mb-5 text-base space-y-4">{{ content | safe }}</div>
+    </div>
+    <img
+        src="{{ image }}"
+        alt="{{ imageAlt }}"
+        id="profile-image"
+        class= "h-auto mb-4 rounded-md
+                w-2/12 sm:w-1/12
+                hidden sm:flex">
+</div>
 
-<h2 class="resume-section-header">💼 Work Experience</h2>
+<div id="first-resume-section" class="resume-section">
+    <h2>💼 Work Experience</h2>
 {% for experience in resumeData.experiences %}
 <div class="resume-card">
     <div class="card-body">
-        <h3>{{ experience.position }}</h3>
+            <h3>{{ experience.position }} at {{ experience.company }}</h3>
         <ul class="resume-not-dotted-list flex flex-wrap list-none">
-          <li><strong>Company:</strong> {{ experience.company }}</p>
           <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
           <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
           <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
@@ -41,15 +52,17 @@ layout: base.njk
     </div>
 </div>
 {% endfor %}
-
 <div class="resume-card">
     <div class="card-body">
         <h3>Before software development</h3>
         <p>I worked approx. 5 years in B2B sales and before going to the University I worked as an electricican for 2 years.</p>
     </div>
+    </div>
+</div>
 </div>
 
-<h2 class="resume-section-header">🎓 Certifications</h2>
+<div class="resume-section">
+    <h2>🏅 Certifications</h2>
 {% for certification in resumeData.certifications %}
 <div class="resume-card">
     <div class="card-body">
@@ -69,3 +82,4 @@ layout: base.njk
     </div>
 </div>
 {% endfor %}
+</div>

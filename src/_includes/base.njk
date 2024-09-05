@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Modesto Software</title>
     <link href="/output.css" rel="stylesheet">
+    <link href="/css/print.css" rel="stylesheet" media="print"/>
     <link href="/css/cookieconsent.css" rel="stylesheet">
     <link href="/css/boxicons.min.css" rel="stylesheet">
 
@@ -81,7 +82,7 @@
 
     <!-- Main Content Area -->
     <main class="flex-grow flex justify-center">
-      <div class="w-10/12 md:w-8/12 pt-4 pb-6 md:pt-6 md:pb-8">
+      <div id="main-container" class="w-10/12 md:w-8/12 pt-4 pb-6 md:pt-6 md:pb-8">
         <h1 class="page-title">{{ pageHeader }}</h1>
         {{ content | safe }}
       </div>
