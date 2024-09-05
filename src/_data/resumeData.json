@@ -14,26 +14,24 @@
         "country": "Sweden"
       },
       "responsibilities": [
-        "Development of e-commerce solutions on Nitro product (based on Optimizely CMS and Commerce)",
-        "Work with integrations such as Klarna Checkout, Voyado Elevate indexing, inRiver PIM, Voyado CRM",
-        "Primary focus on BE using .NET (.NET Framework in older projects and modern .NET in newer)",
-        "Administrating CI/CD with TeamCity and Octopus",
-        "Working extensively with MSSQL server"
+        "Development of e-com solutions on Nitro product (based on Optimizely CMS and Commerce)",
+        "Work with integrations such as Klarna Checkout, Voyado Elevate and CRM and inRiver PIM",
+        "Primary focus on BE using .NET and working extensively with MSSQL server",
+        "Administrating CI/CD with TeamCity and Octopus"
       ],
       "achievements": [
         "Engaged in diverse client projects",
         "Maintained great collaboration with clients and colleagues",
-        "Gained recognition as a technically competent developer",
-        "Known for delivering high-quality results"
+        "Gained recognition as a technically competent developer"
       ],
       "skills": [
         ".NET",
+        ".NET Framework",
         "C#",
         "Azure",
         "Docker",
         "CI/CD",
         "MSSQL",
-        "EPiServer",
         "Optimizely",
         "Teamcity",
         "Octopus",
@@ -60,14 +58,12 @@
         "Development on Inyet's SaaS solution for scanning and analyzing payments, to detect faults, frauds etc.",
         "Mostly work on the BE parts (.NET/SQL) and and some limited FE work (AngularJS)",
         "Introducing Scrum to the organization as the Scrum Master",
-        "Setting up and maintaining CI/CD with TeamCity and Octopus",
-        "Working extensively with MSSQL server, auditing execution plans, etc."
+        "Setting up and maintaining CI/CD with TeamCity and Octopus"
       ],
       "achievements": [
         "Successfully worked with all parts of the product with different stakeholders",
         "Participated in taking the solution from old-school .NET to modern cloud-based",
-        "Esteemed as a valuable and competent colleague",
-        "Known for delivering high-quality results"
+        "Esteemed as a valuable and competent colleague and known for delivering high-quality"
       ],
       "skills": [
         ".NET",
@@ -125,7 +121,7 @@
       "skills": ["Linguistics", "Portuguese", "Brazilian Portuguese", "Comparative Literature", "Literary Theory"]
     },
     {
-      "name": "Portuguese Letters",
+      "name": "App Developer: Android and iPhone",
       "description": "The program for iPhone and Android programmers covers comprehensive training in developing mobile applications using Swift and Java/Kotlin. It includes knowledge of publishing requirements for iOS and Android, understanding market demands, sales channels, and development tools. The curriculum covers programming, debugging, configuration of development tools, and documentation processes. Students learn about factors affecting programming quality, methods for internationalization, automation tools for IoT, and various programming languages and tools for IoT. The course emphasizes creating apps according to specifications, publishing them, and ensuring they meet quality standards\nSome months into the course I was accepted to CapGemini's trainee program, so I made my course internship as employee at CapGemini.",
       "degree": "Vocational Degree",
       "school": "Malmö Yrkeshögskola",

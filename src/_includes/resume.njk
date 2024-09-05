@@ -1,31 +1,38 @@
 ---
+js: '/js/printButton.js'
 layout: base.njk
 ---
 
-<div class="flex flex-row items-start space-x-0 md:space-x-5">
-    <div class="flex-1 mb-4">
-        <div class="mb-4 md:mb-5 text-base space-y-4">{{ content | safe }}</div>
+<div id="resume-intro-section" class="flex flex-col sm:flex-row items-center space-x-0 md:space-x-5">
+    <div class="flex-1">
+        <div class="text-base space-y-4">{{ content | safe }}</div>
     </div>
-    <img
-        src="{{ image }}"
-        alt="{{ imageAlt }}"
-        id="profile-image"
-        class= "h-auto mb-4 rounded-md
-                w-2/12 sm:w-1/12
-                hidden sm:flex">
+    <div class="flex flex-col items-center space-y-5 ml-5">
+        <div id="profile-image-container" class="avatar hidden sm:flex">
+            <div class="ring ring-primary
+                        ring-offset-2 ring-offset-base-100
+                        rounded-full w-24">
+                <img
+                    src="{{ image }}"
+                    alt="{{ imageAlt }}"
+                >
+            </div>
+        </div>
+        <button id="print-button" class="btn btn-primary">Print Resume</button>
+    </div>
 </div>
 
-<div id="first-resume-section" class="resume-section">
+<div id="resume-first-section" class="resume-section">
     <h2>💼 Work Experience</h2>
     {% for experience in resumeData.experiences %}
     <div class="resume-card">
         <div class="card-body">
             <h3>{{ experience.position }} at {{ experience.company }}</h3>
             <ul class="resume-not-dotted-list flex flex-wrap list-none">
-            <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
-            <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
-            <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
-            <li><strong>Type:</strong> {{ experience.type }}</p>
+                <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
+                <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
+                <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
+                <li><strong>Type:</strong> {{ experience.type }}</p>
             </ul>
 
             <h4 class="experience-sub-header">Responsibilities:</h4>
