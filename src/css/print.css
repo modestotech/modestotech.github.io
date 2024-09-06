@@ -1,3 +1,10 @@
+#resume-logo {
+    display: block;
+    position: absolute;
+    top: 0mm;
+    right: 2mm;
+}
+
 header, footer, .ad-banner {
     display: none;
 }
@@ -38,6 +45,10 @@ header, footer, .ad-banner {
     all: unset; /* Removes all styling */
     display: block; /* Ensure it remains a block-level element */
     break-inside: avoid;
+}
+
+.resume-card h3 {
+    margin-bottom: 0.2rem;
 }
 
 .card-body {
