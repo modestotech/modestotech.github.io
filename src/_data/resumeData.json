@@ -1,6 +1,7 @@
 {
   "experiences": [
     {
+      "show": true,
       "position": "System Developer",
       "company": "Avensia AB",
       "allocation": "100%",
@@ -35,13 +36,14 @@
         "Optimizely",
         "Teamcity",
         "Octopus",
-        "React.js",
+        "React",
         "JavaScript",
         "Git",
         "Scrum"
       ]
     },
     {
+      "show": true,
       "position": "Backend Developer",
       "company": "Inyett AB",
       "allocation": "100%",
@@ -79,6 +81,41 @@
         "Git",
         "Scrum"
       ]
+    },
+    {
+      "show": true,
+      "position": "Frontend and Mobile Developer",
+      "company": "Capgemini",
+      "allocation": "100%",
+      "type": "Permanent position",
+      "duration": {
+        "start": "2018-02",
+        "end": "2019-02"
+      },
+      "location": {
+        "city": "Malmö",
+        "country": "Sweden"
+      },
+      "responsibilities": [
+        "Development of mobile apps, FE and BE",
+        "Meeting clients and delivering results on tight deadlines",
+        "Participate in innovation projects"
+      ],
+      "achievements": [
+        "Quickly learned several different technologies and stacks",
+        "Took responsibility of whole FE stack in a project"
+      ],
+      "skills": [
+        "React Native",
+        "React",
+        "Kotlin",
+        "Android",
+        ".NET",
+        "C#",
+        "MSSQL",
+        "JavaScript",
+        "Git"
+      ]
     }
   ],
   "certifications": [
@@ -99,6 +136,7 @@
   ],
   "education": [
     {
+      "show": true,
       "name": "Business Administration with major in Finance",
       "description": "The Bachelor's degree in Finance at Lund University covers economics, business administration, statistics, and business law. The program includes group work and various examination formats. Students choose specializations such as Entrepreneurship, Financing, Leadership and Change Management, Marketing, or Business and Data Analytics. The final term includes a comprehensive program examination to review and apply the knowledge gained.",
       "degree": "Bachelor's degree",
@@ -110,10 +148,11 @@
       "skills": ["Leadership", "Change Management", "Financial analysis", "Statistical Analysis"]
     },
     {
+      "show": true,
       "name": "Portuguese Letters",
       "description": "The Bachelor's degree in Portuguese Literature at Högskolan Dalarna provides training in the Portuguese language and its diverse literary traditions. The coursework includes studies on contemporary Brazilian and Portuguese literature, African literature in Portuguese, and their societal impacts. Students develop skills in phonetics, grammar, and both written and oral communication. The program covers theoretical aspects of language in society, linguistic variation, and explores transcultural perspectives in contemporary literature. It focuses on literary analysis, research methodologies, and scientific specialization, ending with a comprehensive thesis project.",
       "degree": "Bachelor's degree",
-      "school": "Högskolan Dalarna",
+      "school": "Dalarna University",
       "duration": {
         "start": "2012-06",
         "end": "2017-01"
@@ -121,8 +160,9 @@
       "skills": ["Linguistics", "Portuguese", "Brazilian Portuguese", "Comparative Literature"]
     },
     {
+      "show": true,
       "name": "App Developer: Android and iPhone",
-      "description": "The program for iPhone and Android programmers covers comprehensive training in developing mobile applications using Swift and Java/Kotlin. It includes knowledge of publishing requirements for iOS and Android, understanding market demands, sales channels, and development tools. The curriculum covers programming, debugging, configuration of development tools, and documentation processes. Students learn about factors affecting programming quality, methods for internationalization, automation tools for IoT, and various programming languages and tools for IoT. The course emphasizes creating apps according to specifications, publishing them, and ensuring they meet quality standards\nSome months into the course I was accepted to CapGemini's trainee program, so I made my course internship as employee at CapGemini.",
+      "description": "The program for iPhone and Android programmers covers comprehensive training in developing mobile applications using Swift and Java/Kotlin. The curriculum covers programming, debugging, configuration of development tools, and documentation processes. Students learn about factors affecting programming quality, methods for internationalization, automation tools for IoT, and various programming languages and tools for IoT.<br>Some months into the course I was accepted to CapGemini's trainee program, so I made my course internship as employee at CapGemini.",
       "degree": "Vocational Degree",
       "school": "Malmö Yrkeshögskola",
       "duration": {
