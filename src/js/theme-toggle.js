@@ -13,10 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
     theme = savedTheme;
   } else {
-    // Get the current theme from the document or default to light
-    const currentTheme =
-      document.documentElement.getAttribute("data-theme") || "light";
-    theme = currentTheme;
+
+    var browserPreferenceIsDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    theme = browserPreferenceIsDark ? "dark" : "light";
   }
 
   updateLogo(theme);
@@ -36,7 +35,9 @@ themeToggle.addEventListener("change", function () {
 function updateLogo(theme) {
   const logo = document.getElementById("navbar-logo");
   logo.classList.add("hidden");
-  var logoResource = theme === 'dark' ? "/images/logo_light.png" : "/images/logo_dark.png";
+  var logoResource = theme === 'dark'
+    ? "/images/modesto_software_logo_for_dark_mode.png"
+    : "/images/modesto_software_logo_for_light_mode.png";
   logo.setAttribute("src", logoResource);
   logo.classList.remove("hidden");
 }

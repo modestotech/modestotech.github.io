@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
     "node_modules/boxicons/fonts/" : "fonts/"
   });
   eleventyConfig.addPassthroughCopy({ "./src/favicons" : "/"});
+  eleventyConfig.addPassthroughCopy({ "./src/favicons/modesto_software_favicon_for_light_mode.ico" : "/favicon.ico"});
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
