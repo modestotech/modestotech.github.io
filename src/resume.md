@@ -1,8 +1,9 @@
 ---
 title: "Resume"
+metaDescription: "Max Modesto Wallin's resume: Freelance software developer and consultant in Helsingborg, Sweden, with expertise in .NET and Azure."
 pageHeader: "Max Modesto Wallin"
-image: "/images/profile.jpg"
-imageAlt: "Profile picture"
+image: "/images/max-modesto-wallin-profile-picture.jpg"
+imageAlt: "Max Modesto Wallin profile picture"
 layout: resume.njk
 ---
 
