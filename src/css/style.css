@@ -24,7 +24,7 @@
   @apply mt-6;
 }
 
-.resume-section h2:first-of-type {
+.resume-section h2 {
   @apply text-xl font-semibold mb-3
 }
 

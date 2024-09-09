@@ -1,9 +1,43 @@
 ---
-js: '/js/printButton.js'
+jsFile1: '/js/printButton.js'
+jsFile2: '/js/populateContactPage.js'
 layout: base.njk
 ---
 
-<div id="resume-intro-section" class="flex flex-col sm:flex-row items-center space-x-0 md:space-x-5">
+<div id="contact-section" class="hidden mx-2 mb-3">
+    <div id="contact-container" class="flex flex-row flex-wrap space-y-1">
+        <!-- Email -->
+        <div class="flex items-center space-x-2
+                    w-1/2 box-border">
+            <i class="bx bxs-envelope bx-sm"></i>
+            <a href=""></a>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center space-x-2
+                    w-1/2 box-border">
+            <i class="bx bxs-phone bx-sm"></i>
+            <a href=""></a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="flex items-center space-x-2
+                    w-1/2 box-border">
+            <i class="bx bxl-linkedin bx-sm"></i>
+            <a href="" target="_blank"></a>
+        </div>
+
+        <!-- Github -->
+        <div class="flex items-center space-x-2
+                    w-1/2 box-border">
+            <i class="bx bxl-github bx-sm"></i>
+            <a href="" target="_blank"></a>
+        </div>
+    </div>
+    <hr class="h-0.5 my-4 bg-base-300">
+</div>
+
+<div id="resume-intro-section" class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2">
     <div class="flex-1">
         <div class="text-base space-y-4">{{ content | safe }}</div>
     </div>
@@ -19,7 +53,9 @@ layout: base.njk
                 >
             </div>
         </div>
-        <button id="print-button" class="btn btn-primary mt-3">Print Resume</button>
+        <button id="print-button" class="btn btn-primary mt-4 leading-4">
+            Print Formatted <br> Resume
+        </button>
     </div>
 </div>
 
@@ -106,7 +142,9 @@ layout: base.njk
         <div class="card-body">
             <h3>{{ course.name }}</h3>
             <p class="text-sm italic">{{ course.degree }} from {{ course.school }}</p>
+            {% if featureToggles.resume.showEducationDescription %}
             <p class="text-xs">{{ course.description | safe }}</p>
+            {% endif %}
             <p><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</p>
             <h4 class="experience-sub-header">Skills:</h4>
             <ul class="attribute-list">
