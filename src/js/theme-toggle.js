@@ -46,7 +46,7 @@ function enableLightMode() {
 
   persistTheme("light");
   updateLogo("light");
-  toggleMeta();
+  setMetaTags();
 }
 
 function enableDarkMode() {
@@ -55,7 +55,7 @@ function enableDarkMode() {
 
   persistTheme("dark");
   updateLogo("dark");
-  toggleMeta();
+  setMetaTags("dark");
 }
 
 function persistTheme(theme) {
@@ -72,12 +72,19 @@ function updateLogo(theme) {
   logo.classList.remove("hidden");
 }
 
-function toggleMeta() {
-  const metaTags = document.head.querySelectorAll(".meta-theme");
-  for (var i = 0; i < metaTags.length; i++) {
-    const meta = metaTags[i];
-    const other = meta.dataset.other;
-    meta.dataset.other = meta.content;
-    meta.content = other;
+function setMetaTags(theme) {
+  const themeColorTag = document.head.querySelector('.meta-theme[name="theme-color"]');
+  const colorSchemeTag = document.head.querySelector('.meta-theme[name="color-scheme"]');
+
+  if (themeColorTag && colorSchemeTag) {
+    if (theme === 'dark') {
+      themeColorTag.content = "#18181B";
+      colorSchemeTag.content = "dark";
+    } else {
+      themeColorTag.content = "#FAFAFA";
+      colorSchemeTag.content = "light";
+    }
+  } else {
+    console.warn('Required meta tags not found');
   }
 }
