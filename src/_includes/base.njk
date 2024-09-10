@@ -104,7 +104,10 @@
     <main class="flex-grow flex justify-center">
       <div id="main-container" class="w-10/12 md:w-8/12 pt-4 pb-6 md:pt-6 md:pb-8">
         {% if pageHeader %}
-        <h1 id="page-title">{{ pageHeader }}</h1>
+        <h1 class="text-2xl text-center font-bold mb-1 md:mb-2">{{ pageHeader }}</h1>
+        {% endif %}
+        {% if subHeader %}
+        <h2 class="text-xl text-center mb-3 md:mb-5">{{ subHeader }}</h2>
         {% endif %}
         {{ content | safe }}
       </div>

@@ -13,11 +13,6 @@ header, footer, .ad-banner {
     display: none;
 }
 
-#page-title {
-    margin-top: 0.1cm;
-    margin-bottom: 0.5cm;
-}
-
 #contact-section {
     display: block;
 }
@@ -30,6 +25,16 @@ header, footer, .ad-banner {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+#main-container h1 {
+    margin-top: 0;
+    margin-bottom: 2mm;
+}
+
+#main-container h2 {
+    margin-top: 0;
+    margin-bottom: 4mm;
 }
 
 #profile-image-container {
