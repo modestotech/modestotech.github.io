@@ -10,27 +10,57 @@ document.addEventListener("DOMContentLoaded", () => {
   var theme;
 
   if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
     theme = savedTheme;
-  } else {
 
-    var browserPreferenceIsDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    theme = browserPreferenceIsDark ? "dark" : "light";
+  } else {
+    var browserPreferenceIsDark = window.matchMedia
+      && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      theme = browserPreferenceIsDark ? "dark" : "light";
   }
 
-  updateLogo(theme);
-  themeToggle.checked = theme === "dark";
+  if (theme === "dark") {
+    enableDarkMode();
+    themeToggle.checked = true;
+  } else {
+    enableLightMode();
+  }
 
   // Remove the hidden class to display the toggle and logo
   themeToggleContainer.classList.remove("hidden");
 });
 
 themeToggle.addEventListener("change", function () {
-  const newTheme = themeToggle.checked ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", newTheme);
-  updateLogo(newTheme);
-  localStorage.setItem("theme", newTheme);
+  if (themeToggle.checked) {
+    enableDarkMode();
+  } else {
+    enableLightMode()
+  }
 });
+
+function enableLightMode() {
+  // classList is for Tailwind
+  document.documentElement.classList.remove("dark");
+  // data-theme is for DaisyUI
+  document.documentElement.setAttribute("data-theme", "light");
+
+  persistTheme("light");
+  updateLogo("light");
+  toggleMeta();
+}
+
+function enableDarkMode() {
+  document.documentElement.classList.add("dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+
+  persistTheme("dark");
+  updateLogo("dark");
+  toggleMeta();
+}
+
+function persistTheme(theme) {
+  localStorage.setItem("theme", theme);
+}
 
 function updateLogo(theme) {
   const logo = document.getElementById("navbar-logo");
@@ -40,4 +70,14 @@ function updateLogo(theme) {
     : "/images/modesto_software_logo_for_light_mode.png";
   logo.setAttribute("src", logoResource);
   logo.classList.remove("hidden");
+}
+
+function toggleMeta() {
+  const metaTags = document.head.querySelectorAll(".meta-theme");
+  for (var i = 0; i < metaTags.length; i++) {
+    const meta = metaTags[i];
+    const other = meta.dataset.other;
+    meta.dataset.other = meta.content;
+    meta.content = other;
+  }
 }

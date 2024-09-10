@@ -4,9 +4,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  daisyui: {
-    themes: ["light", "dark"],
-  },
+  darkMode: ['selector'],
   plugins: [
     require('@tailwindcss/typography'),
     require("daisyui")
