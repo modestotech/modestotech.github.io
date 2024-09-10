@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Common */
-#page-title {
-  @apply text-2xl text-center font-bold mb-3 md:mb-5
-}
-
 /* Resume */
 .experience-details-not-dotted-list li {
   @apply w-full sm:w-1/2 mb-1 list-none
