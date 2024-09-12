@@ -1,25 +1,18 @@
+import { getCurrentTheme } from './themeUtils.js';
+
 const themeToggle = document.getElementById("theme-toggle");
+
+const lightThemeName = "light";
+const darkThemeName = "dark";
 
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggleContainer = document.getElementById(
     "theme-toggle-container"
   );
 
-  const savedTheme = localStorage.getItem("theme");
+  var theme = getCurrentTheme();
 
-  var theme;
-
-  if (savedTheme) {
-    theme = savedTheme;
-
-  } else {
-    var browserPreferenceIsDark = window.matchMedia
-      && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      theme = browserPreferenceIsDark ? "dark" : "light";
-  }
-
-  if (theme === "dark") {
+  if (theme === darkThemeName) {
     enableDarkMode();
     themeToggle.checked = true;
   } else {
@@ -40,22 +33,22 @@ themeToggle.addEventListener("change", function () {
 
 function enableLightMode() {
   // classList is for Tailwind
-  document.documentElement.classList.remove("dark");
+  document.documentElement.classList.remove(darkThemeName);
   // data-theme is for DaisyUI
-  document.documentElement.setAttribute("data-theme", "light");
+  document.documentElement.setAttribute("data-theme", lightThemeName);
 
-  persistTheme("light");
-  updateLogo("light");
-  setMetaTags();
+  persistTheme(lightThemeName);
+  updateLogo(lightThemeName);
+  setMetaTags(lightThemeName);
 }
 
 function enableDarkMode() {
-  document.documentElement.classList.add("dark");
-  document.documentElement.setAttribute("data-theme", "dark");
+  document.documentElement.classList.add(darkThemeName);
+  document.documentElement.setAttribute("data-theme", darkThemeName);
 
-  persistTheme("dark");
-  updateLogo("dark");
-  setMetaTags("dark");
+  persistTheme(darkThemeName);
+  updateLogo(darkThemeName);
+  setMetaTags(darkThemeName);
 }
 
 function persistTheme(theme) {
@@ -65,7 +58,7 @@ function persistTheme(theme) {
 function updateLogo(theme) {
   const logo = document.getElementById("navbar-logo");
   logo.classList.add("hidden");
-  var logoResource = theme === 'dark'
+  var logoResource = theme === darkThemeName
     ? "/images/modesto_software_logo_for_dark_mode.png"
     : "/images/modesto_software_logo_for_light_mode.png";
   logo.setAttribute("src", logoResource);
@@ -77,12 +70,12 @@ function setMetaTags(theme) {
   const colorSchemeTag = document.head.querySelector('.meta-theme[name="color-scheme"]');
 
   if (themeColorTag && colorSchemeTag) {
-    if (theme === 'dark') {
+    if (theme === darkThemeName) {
       themeColorTag.content = "#18181B";
-      colorSchemeTag.content = "dark";
+      colorSchemeTag.content = darkThemeName;
     } else {
       themeColorTag.content = "#FAFAFA";
-      colorSchemeTag.content = "light";
+      colorSchemeTag.content = lightThemeName;
     }
   } else {
     console.warn('Required meta tags not found');

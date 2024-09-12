@@ -1,34 +1,48 @@
 ---
-jsFiles:
+jsModuleFiles:
   - '/js/populateContactPage.js'
+jsScriptAsyncFiles:
+  - 'https://www.google.com/recaptcha/api.js'
+css:
+  - '/css/recaptcha.css'
 layout: base.njk
 ---
 
-<div class="card card-compact">
+<div id="recaptcha-container" class="text-center">
+    <p>
+        Nice that you want get in touch!
+        To see my contact details, please first verify that you're a human by completing the recaptcha below.
+    </p>
+    <form class="mt-6" action="?" method="POST">
+        <div
+            class="g-recaptcha"
+            data-sitekey="6LdI_EAqAAAAAADJvKvCDGCkmBarkhw2K9IaZZ6j"
+            data-callback="onReCaptchaSuccess">
+        </div>
+    </form>
+</div>
+
+<div id="card-container" class="hidden card card-compact">
     <div class="card-body items-center text-center text-blue-600">
         <div id="contact-container" class="space-y-4">
             <!-- Email -->
             <div class="flex items-center space-x-2 text-lg">
                 <i class="bx bxs-envelope bx-sm"></i>
-                <a href=""></a>
             </div>
 
             <!-- Phone -->
             <div class="flex items-center space-x-2 text-lg">
                 <i class="bx bxs-phone bx-sm"></i>
-                <a href=""></a>
             </div>
 
             <!-- LinkedIn -->
             <div class="flex items-center space-x-2 text-lg">
                 <i class="bx bxl-linkedin bx-sm"></i>
-                <a href="" target="_blank"></a>
             </div>
 
             <!-- Github -->
             <div class="flex items-center space-x-2 text-lg">
                 <i class="bx bxl-github bx-sm"></i>
-                <a href="" target="_blank"></a>
             </div>
         </div>
     </div>
