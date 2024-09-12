@@ -1,36 +1,19 @@
-import { contactInfo } from './contactInfo.js'
+import { getContactLinkElements, appendIfNotExists } from './contactUtils.js'
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Email
-  var email = contactInfo.email;
-  const emailElement = document.createElement('a');
-  emailElement.href = `mailto:${email}`;
-  emailElement.textContent = email;
+function onReCaptchaSuccess(token) {
+  var linkElements = getContactLinkElements();
 
-  // Phone
-  var phone = contactInfo.phone;
-  const phoneElement = document.createElement('a');
-  phoneElement.href = `tel:${phone}`;
-  phoneElement.textContent = phone;
+  const container = document.querySelector('#contact-container');
 
-  // LinkedIn
-  var linkedInHandle = contactInfo.linkedinHandle;
-  const linkedinElement = document.createElement('a');
-  linkedinElement.href = `https://www.linkedin.com/in/${linkedInHandle}`;
-  linkedinElement.textContent = `linkedin.com/in/${linkedInHandle}`;
-  linkedinElement.target = '_blank';
+  if (linkElements) {
+    appendIfNotExists(container.children[0], linkElements.emailElement);
+    appendIfNotExists(container.children[1], linkElements.phoneElement);
+    appendIfNotExists(container.children[2], linkElements.linkedinElement);
+    appendIfNotExists(container.children[3], linkElements.githubElement);
+  }
 
-  // Github
-  var githubHandle = contactInfo.githubHandle;
-  const githubElement = document.createElement('a');
-  githubElement.href = `https://github.com/${githubHandle}`;
-  githubElement.textContent = `github.com/${githubHandle}`;
-  githubElement.target = '_blank';
+  document.getElementById('card-container').classList.remove("hidden");
+  document.getElementById('recaptcha-container').classList.add("hidden");
+}
 
-  // Insert content into the HTML
-  const contactContainer = document.querySelector('#contact-container');
-  contactContainer.children[0].appendChild(emailElement);
-  contactContainer.children[1].appendChild(phoneElement);
-  contactContainer.children[2].appendChild(linkedinElement);
-  contactContainer.children[3].appendChild(githubElement);
-});
+window.onReCaptchaSuccess = onReCaptchaSuccess;
