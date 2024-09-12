@@ -10,6 +10,8 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy({ "./src/favicons" : "/"});
   eleventyConfig.addPassthroughCopy({ "./src/favicons/modesto_software_favicon_for_light_mode.ico" : "/favicon.ico"});
+  eleventyConfig.addPassthroughCopy({ "./src/robots.txt" : "/robots.txt"});
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
