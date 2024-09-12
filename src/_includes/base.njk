@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
-    <script type="text/plain" data-category="analytics">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-Z0NSCWVSKK');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+    <title>{{ title }} | Modesto Software</title>
+    {% else %}
+    <title>Modesto Software</title>
+    {% endif %}
+
     <meta name="description" content="{{metaDescription}}">
 
     <meta
@@ -25,34 +21,36 @@
       name="color-scheme"
     />
 
-    {% if title %}
-    <title>{{ title }} | Modesto Software</title>
-    {% else %}
-    <title>Modesto Software</title>
-    {% endif %}
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/modesto_software_favicon_for_light_mode.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/modesto_software_favicon_for_dark_mode.ico" media="(prefers-color-scheme: dark)">
 
     <link href="/output.css" rel="stylesheet">
     <link href="/css/print.css" rel="stylesheet" media="print"/>
-    <link href="/css/cookieconsent.css" rel="stylesheet">
     <link href="/css/boxicons.min.css" rel="stylesheet">
 
     {% if css %}
     <link rel="stylesheet" href="{{css}}" />
     {% endif %}
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/modesto_software_favicon_for_light_mode.ico" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/modesto_software_favicon_for_dark_mode.ico" media="(prefers-color-scheme: dark)">
+    <link href="/css/cookieconsent.css" rel="stylesheet">
 
-    {% if jsFile1 %}
-    <script type="module" src="{{jsFile1}}"></script>
-    {% endif %}
-
-    {% if jsFile2 %}
-    <script type="module" src="{{jsFile2}}"></script>
-    {% endif %}
+    {% for jsFile in jsFiles %}
+    <script type="module" src="{{ jsFile }}"></script>
+    {% endfor %}
 
     <script type="module" src="/js/theme-toggle.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
+    <script type="text/plain" data-category="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-Z0NSCWVSKK');
+    </script>
   </head>
   <body class="flex flex-col min-h-screen">
     <script type="module" src="/js/cookieconsent-config.js"></script>
