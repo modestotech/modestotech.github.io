@@ -1,4 +1,4 @@
-import { getCurrentTheme } from './themeUtils.js';
+import { getCurrentTheme } from './utils/themeUtils.js';
 
 const themeToggle = document.getElementById("theme-toggle");
 
