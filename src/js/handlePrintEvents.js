@@ -1,4 +1,4 @@
-import { getContactLinkElements, appendIfNotExists } from "./contactUtils.js";
+import { getContactLinkElements, appendIfNotExists } from "./utils/contactUtils.js";
 
 function handleBeforePrint() {
   const container = document.querySelector("#contact-container");
