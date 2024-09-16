@@ -16,7 +16,7 @@ layout: base.njk
     <form class="mt-6" action="?" method="POST">
         <div
             class="g-recaptcha"
-            data-sitekey="6LdI_EAqAAAAAADJvKvCDGCkmBarkhw2K9IaZZ6j"
+            data-sitekey="{{ keys.recaptchaPublicKey }}"
             data-callback="onReCaptchaSuccess">
         </div>
     </form>

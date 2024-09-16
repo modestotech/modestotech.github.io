@@ -11,9 +11,9 @@ function onReCaptchaSuccess(token) {
     appendIfNotExists(container.children[2], linkElements.linkedinElement);
     appendIfNotExists(container.children[3], linkElements.githubElement);
   }
-
   document.getElementById('card-container').classList.remove("hidden");
   document.getElementById('recaptcha-container').classList.add("hidden");
+  grecaptcha.reset();
 }
 
 window.onReCaptchaSuccess = onReCaptchaSuccess;
