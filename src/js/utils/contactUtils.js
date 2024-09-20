@@ -1,5 +1,5 @@
 const contactInfo = {
-  email: "[redacted]",
+  email: "max@modestosoftware.com",
   phone: "[redacted]",
   linkedinHandle: "maxmw",
   githubHandle: "modestotech",
