@@ -11,6 +11,18 @@
     {% endif %}
 
     <meta name="description" content="{{metaDescription}}">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        frame-src https://www.gstatic.com https://www.google.com;
+        script-src 'none';
+        script-src-elem 'self' https://www.google.com/recaptcha/api.js https://www.googletagmanager.com/gtag/js https://www.gstatic.com/recaptcha/releases/;
+        img-src 'self' https://www.googletagmanager.com;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://*.google-analytics.com https://www.google.com;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
 
     <meta
       class="meta-theme"
@@ -51,14 +63,7 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
-    <script type="text/plain" data-category="analytics">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-Z0NSCWVSKK');
-    </script>
+    <script src="/js/analytics.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
     <script type="module" src="/js/cookieconsentConfig.js"></script>
