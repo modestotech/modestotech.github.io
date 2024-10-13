@@ -2,6 +2,37 @@
   "experiences": [
     {
       "show": true,
+      "position": "IT Consultant",
+      "company": "Consid AB",
+      "allocation": "100%",
+      "type": "Permanent position",
+      "duration": {
+        "start": "2024-10",
+        "end": "Ongoing"
+      },
+      "location": {
+        "city": "Helsingborg",
+        "country": "Sweden"
+      },
+      "responsibilities": [
+        "IT consultant in diverse projects"
+      ],
+      "achievements": [
+        "Engaged in diverse client projects"
+      ],
+      "skills": [
+        ".NET",
+        ".NET Framework",
+        "C#",
+        "Azure",
+        "Biztalk",
+        "Docker",
+        "CI/CD",
+        "MSSQL",
+        "Git"
+      ]
+    },    {
+      "show": true,
       "position": "System Developer",
       "company": "Avensia AB",
       "allocation": "100%",
