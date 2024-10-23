@@ -12,7 +12,7 @@ layout: base.njk
     <form class="mt-6" action="?" method="POST" id="captcha-form" class="space-y-4 md:space-y-0 md:flex md:items-center md:justify-center">
         <div id="captcha-question" class="mb-4 text-lg"></div>
         <div class="flex flex-col sm:flex-row items-center sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <input type="number" id="captcha-answer" name="captcha-answer" class="input input-bordered input-info input-md w-24 sm:w-36">
+            <input type="number" id="captcha-answer" name="captcha-answer" class="input input-bordered input-info input-md w-24 sm:w-36" required>
             <input type="submit" value="Submit" class="btn btn-primary btn-md">
         </div>
         <div id="feedback-message" class="text-red-500 mt-4"></div>
