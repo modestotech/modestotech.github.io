@@ -2,7 +2,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/js");
   eleventyConfig.addPassthroughCopy("./src/css/print.css", "css/print.css");
-  eleventyConfig.addPassthroughCopy("./src/css/recaptcha.css", "css/recaptcha.css");
   eleventyConfig.addPassthroughCopy({
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.css" : "css/cookieconsent.css",
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js" : "js/cookieconsent.umd.js",
