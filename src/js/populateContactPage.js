@@ -36,7 +36,7 @@ function validateCaptcha(event) {
   const userAnswer = document.getElementById("captcha-answer").value;
   const correctAnswer =
     document.getElementById("captcha-question").dataset.answer;
-  const feedbackMessage = document.getElementById('feedback-message');
+  const feedbackMessage = document.getElementById("feedback-message");
 
   event.preventDefault();
 
