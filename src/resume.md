@@ -2,7 +2,7 @@
 title: "Resume"
 pageHeader: "Max Modesto Wallin"
 subHeader: "System Developer"
-image: "/images/max-modesto-wallin-profile-picture.jpg"
+image: "/images/profile-2024.png"
 imageAlt: "Max Modesto Wallin profile picture"
 layout: resume.njk
 ---
