@@ -5,4 +5,4 @@ imageAlt: "Max Modesto Wallin profile picture"
 layout: start.njk
 ---
 
-Nice to have you here, I'm Max Modesto Wallin, and I'm a software developer based in Helsingborg, Sweden. I specialize in **.NET** and **Azure** but like software development in general.
+Nice to have you here! I’m Max Modesto Wallin, a software developer based in Helsingborg, Sweden. I have over {% yearsOfExperience %} years of professional experience, specializing in .NET and Azure, though I enjoy software development in all its forms.
