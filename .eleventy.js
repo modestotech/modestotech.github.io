@@ -12,8 +12,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/favicons/modesto_software_favicon_for_light_mode.ico" : "/favicon.ico"});
   eleventyConfig.addPassthroughCopy({ "./src/robots.txt" : "/robots.txt"});
 
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
+  eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
+  eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - 2016);
+  
   return {
     dir: {
       input: "src",
