@@ -2,8 +2,8 @@
   "experiences": [
     {
       "show": true,
-      "position": "IT Consultant",
-      "company": "Consid AB",
+      "position": "Integration Developer (as consultant through Consid AB)",
+      "company": "Öresundsbrokonsortiet",
       "allocation": "100%",
       "type": "Permanent position",
       "duration": {
@@ -11,24 +11,35 @@
         "end": "Ongoing"
       },
       "location": {
-        "city": "Helsingborg",
+        "city": "Malmö / Remote",
         "country": "Sweden"
       },
       "responsibilities": [
-        "IT consultant in diverse projects"
+        "Work with, among other, these Azure components: Azure Functions, Azure Container Apps, Azure API Management (APIM), Azure Keyvault, Azure Container Registry, Azure Identity",
+        "Extensive work in BizTalk 2020, both maintainging legacy integrations and rewriting them for Azure",
+        "Detailing and designing architectural solutions in co-operation with stakeholders and different teams",
+        "Maintaining and developing .NET API hosted in Azure, consuming data from Dynamics CRM", 
+        "Secure authentication and authorization in Azure with managed identities",
+        "CI/CD development in Azure Devops YAML pipelines",
+        "Azure IaC with bicep"
       ],
       "achievements": [
-        "Engaged in diverse client projects"
+        "Known for being communicative, independent, reliable and showing ownership",
+        "My hands-on approach to solving problems is greatly appreciated.",
+        "Major contributor in making a big impact CRM/BC project succeed",
+        "Lead the work of making the code base and architecture more modern, stable and clean"
       ],
       "skills": [
-        ".NET",
+        ".NET8",
         ".NET Framework",
         "C#",
         "Azure",
         "Biztalk",
+        "Bicep IaC",
         "Docker",
         "CI/CD",
         "MSSQL",
+        "Dynamics CRM",
         "Git"
       ]
     },    {
