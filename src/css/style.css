@@ -24,7 +24,7 @@
 }
 
 .resume-card {
-  @apply card card-compact bg-base-300 shadow-xl mb-8
+  @apply card bg-base-300 shadow-xl mb-8
 }
 
 .resume-card h3 {
