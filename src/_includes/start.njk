@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<div class="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-5">
+<div class="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-5 space-y-2 md:space-y-0">
     <img
         src="{{ image }}"
         alt="{{ imageAlt }}"
@@ -13,7 +13,7 @@ layout: base.njk
                 ">
     <div class="flex-1 text-center md:text-left mb-4 md:mb-0
                 order-1 md:order-2">
-        <div class="text-lg md:text-2xl space-y-3 text-base-content">
+        <div class="text-lg md:text-1xl lg:text-2xl space-y-3 text-base-content">
             {{ content | safe }}
             <p>Feel free to check my <a class="text-blue-600 underline dark:text-blue-500 hover:no-underline" href="/resume">resume</a>, and don't hesitate to <a class="text-blue-600 underline dark:text-blue-500 hover:no-underline" href="/contact">reach out</a>.<p>
         </div>
