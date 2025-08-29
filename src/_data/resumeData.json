@@ -15,13 +15,13 @@
         "country": "Sweden"
       },
       "responsibilities": [
-        "Work with, among other, these Azure components: Azure Functions, Azure Container Apps, Azure API Management (APIM), Azure Keyvault, Azure Container Registry, Azure Identity",
+        "Work with, among other, these Azure components: Azure Functions, Azure Container Apps, Azure API Management (APIM), Azure Keyvault, Azure Container Registry",
         "Extensive work in BizTalk 2020, both maintainging legacy integrations and rewriting them for Azure",
         "Detailing and designing architectural solutions in co-operation with stakeholders and different teams",
         "Maintaining and developing .NET API hosted in Azure, consuming data from Dynamics CRM", 
-        "Secure authentication and authorization in Azure with managed identities",
+        "Secure authentication and authorization in Azure with managed identities and other Entra resources",
         "CI/CD development in Azure Devops YAML pipelines",
-        "Azure IaC with bicep"
+        "Infrastructura as Code development for Azure with bicep"
       ],
       "achievements": [
         "Known for being communicative, independent, reliable and showing ownership",
