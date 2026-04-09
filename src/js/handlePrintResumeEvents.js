@@ -7,9 +7,9 @@ function handleBeforePrint() {
 
   if (linkElements) {
     appendIfNotExists(container.children[0], linkElements.emailElement);
-    appendIfNotExists(container.children[1], linkElements.phoneElement);
-    appendIfNotExists(container.children[2], linkElements.linkedinElement);
-    appendIfNotExists(container.children[3], linkElements.githubElement);
+    appendIfNotExists(container.children[1], linkElements.linkedinElement);
+    appendIfNotExists(container.children[2], linkElements.githubElement);
+    appendIfNotExists(container.children[3], linkElements.phoneElement);
   }
 
   const previousTitle = document.title;
