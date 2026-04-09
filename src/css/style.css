@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 /* Resume */
-.experience-details-not-dotted-list li {
-  @apply w-full sm:w-1/2 mb-1 list-none
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px 24px;
+    font-size: 0.875rem;
+    width: 100%;
 }
 
-.certification-skills-not-dotted-list li {
-  @apply mb-1 list-none
+/* Force 2 rows: 2 items per row */
+.meta-row.two-rows > span {
+    width: 48%;
 }
 
 .experience-sub-header {
