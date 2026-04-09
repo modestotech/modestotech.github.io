@@ -19,25 +19,23 @@
         align-items: center;
     }
 
-    #contact-section #contact-container {
+    #contact-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 12mm;
         row-gap: 1mm;
         width: fit-content;
-        margin: 0 auto;
     }
 
-    #contact-section #contact-container > div {
+    #contact-container > div {
         flex: 0 0 60mm;
-        width: 60mm !important;
         display: flex;
         align-items: center;
         gap: 2mm;
     }
 
-    #contact-section #contact-container > div i {
+    #contact-container > div i {
         width: 5mm;
         text-align: center;
     }
