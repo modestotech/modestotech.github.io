@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/robots.txt" : "/robots.txt"});
 
   eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
-  eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - 2016);
+  eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - 2017);
   
   return {
     dir: {
