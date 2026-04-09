@@ -62,33 +62,42 @@ layout: base.njk
     <div class="resume-card">
         <div class="card-body">
             <h3>{{ experience.position }} at {{ experience.company }}</h3>
-            <ul class="experience-details-not-dotted-list flex flex-wrap">
-                <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
-                <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
-                <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
-                <li><strong>Type:</strong> {{ experience.type }}</p>
-            </ul>
 
-            <h4 class="experience-sub-header">Responsibilities:</h4>
-            <ul class="attribute-list">
-                {% for responsibility in experience.responsibilities %}
-                <li class="big">{{ responsibility }}</li>
-                {% endfor %}
-            </ul>
+            <div class="card-intro">
+                <ul class="experience-details-not-dotted-list flex flex-wrap">
+                    <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
+                    <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
+                    <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
+                    <li><strong>Type:</strong> {{ experience.type }}</p>
+                </ul>
+            </div>
 
-            <h4 class="experience-sub-header">Achievements:</h4>
-            <ul class="attribute-list">
-                {% for achievement in experience.achievements %}
-                <li class="big">{{ achievement }}</li>
-                {% endfor %}
-            </ul>
+            <div class="card-section">
+                <h4 class="experience-sub-header">Responsibilities:</h4>
+                <ul class="attribute-list">
+                    {% for responsibility in experience.responsibilities %}
+                    <li class="big">{{ responsibility }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-            <h4 class="experience-sub-header">Skills:</h4>
-            <ul class="attribute-list">
-                {% for skill in experience.skills %}
-                <li class="small">{{ skill }}</li>
-                {% endfor %}
-            </ul>
+            <div class="card-section">
+                <h4 class="experience-sub-header">Achievements:</h4>
+                <ul class="attribute-list">
+                    {% for achievement in experience.achievements %}
+                    <li class="big">{{ achievement }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h4 class="experience-sub-header">Skills:</h4>
+                <ul class="attribute-list">
+                    {% for skill in experience.skills %}
+                    <li class="small">{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
         </div>
     </div>

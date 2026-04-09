@@ -22,20 +22,37 @@
     }
 
     /* 2. Typography and Spacing */
-    #main-container h1 { margin: 0 0 2mm 0; }
-    #main-container h2 { margin: 0 0 4mm 0; }
-
-    .resume-section {
-        margin: 0.6cm 0 0 0; /* Slightly reduced for paper fit */
+    #main-container h1 {
+        display: block !important;
+        margin: 0 !important;
+        padding-bottom: 0.5mm !important;
+        break-after: avoid;
+        break-inside: avoid; /* NEW: prevents the heading itself from splitting */
     }
 
-    .resume-section h2 {
-        margin: 0;
+    #main-container h2 {
+        display: block !important;
+        margin: 0 !important;
+        padding-bottom: 1mm !important;
         break-after: avoid;
+        break-inside: avoid; /* NEW */
+    }
+
+    #main-container h3 {
+        margin: 0 !important;
+        break-after: avoid;
+        break-inside: avoid; /* NEW */
+    }
+
+    .resume-section {
+        display: block !important;
+        margin: 0.6cm 0 0 0;
     }
 
     .experience-sub-header {
         margin: 0;
+        break-after: avoid;       /* NEW: binds sub-header to what follows */
+        break-inside: avoid;      /* NEW */
     }
 
     /* 3. Card Styling for Print */
@@ -43,12 +60,8 @@
         all: unset;
         display: block;
         margin-bottom: 4mm;
-        border-bottom: 1px solid #eee; /* Light separator for print */
+        border-bottom: 1px solid #eee;
         padding-bottom: 2mm;
-    }
-
-    .resume-card h3 {
-        margin-bottom: 0;
     }
 
     .resume-card .card-body {
@@ -59,11 +72,21 @@
         display: none;
     }
 
+    .card-intro {
+        break-inside: avoid;
+        break-after: avoid;
+    }
+
+    .card-section {
+        break-inside: avoid;
+    }
+
     /* 4. Grid Logic for Paper (A4/Letter) */
     .attribute-list {
         display: flex !important;
         flex-wrap: wrap !important;
         list-style-type: disc !important;
+        break-inside: avoid; /* NEW: keeps skill/attribute lists from splitting mid-row */
     }
 
     /* Big: Always 1 col */
@@ -72,17 +95,17 @@
         margin-bottom: 1mm !important;
     }
 
-    /* Medium: 2 cols for print (3 was often too tight) */
+    /* Medium: 2 cols for print */
     .attribute-list .medium {
         width: 50% !important;
         margin-bottom: 1mm !important;
     }
 
-    /* Small: 3 cols for print (4 is usually too cramped for paper) */
+    /* Small: 3 cols for print */
     .attribute-list .small {
         width: 33.3333% !important;
         margin-bottom: 1mm !important;
-        font-size: 0.9em; /* Slightly smaller for density */
+        font-size: 0.9em;
     }
 
     /* Ensure metadata (Org, Date) spreads out on paper */
@@ -90,6 +113,7 @@
         display: flex !important;
         justify-content: space-between !important;
         width: 100% !important;
+        break-after: avoid; /* NEW: binds this metadata row to the content below it */
     }
 
     #profile-image-container {
