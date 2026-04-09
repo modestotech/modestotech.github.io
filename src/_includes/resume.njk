@@ -154,9 +154,9 @@ layout: base.njk
             <div class="flex flex-col gap-4">
                 <div class="card-intro">
                     <div class="meta-row">
-                        <span class="text-sm italic">{{ course.degree }} from {{ course.school }}</span>
+                        <span class="italic">{{ course.degree }} from {{ course.school }}</span>
                         {% if featureToggles.resume.showEducationDescription %}
-                        <span class="text-xs flex-1 px-4 text-center">{{ course.description | safe }}</span>
+                        <span>{{ course.description | safe }}</span>
                         {% endif %}
                         <span><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</span>
                     </div>
