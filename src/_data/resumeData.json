@@ -15,25 +15,26 @@
         "country": "Sweden"
       },
       "responsibilities": [
-        "Work with, among other, these Azure components: Azure Functions, Azure Container Apps, Azure API Management (APIM), Azure Keyvault, Azure Container Registry",
-        "Extensive work in BizTalk 2020, both maintainging legacy integrations and rewriting them for Azure",
-        "Detailing and designing architectural solutions in co-operation with stakeholders and different teams",
+        "Work with, among other, these Azure components: Container Apps, API Management (APIM), Storage Account, ServiceBus, Keyvault, Container Registry",
+        "Extensive work in BizTalk 2020, maintainging legacy integrations and re-implementations in Azure",
+        "Detailing and designing architectural solutions in co-operation with stakeholders",
         "Maintaining and developing .NET API hosted in Azure, consuming data from Dynamics CRM", 
-        "Secure authentication and authorization in Azure with managed identities and other Entra resources",
+        "Secure cloud authentication and authorization with managed identities",
         "CI/CD development in Azure Devops YAML pipelines",
         "Infrastructura as Code development for Azure with bicep"
       ],
       "achievements": [
-        "Known for being communicative, independent, reliable and showing ownership",
-        "My hands-on approach to solving problems is greatly appreciated.",
-        "Major contributor in making a big impact CRM/BC project succeed",
-        "Lead the work of making the code base and architecture more modern, stable and clean"
+        "Designing and implementing the architectural migration of the integration suite for data transfer between toll stations and ÖSB systems.",
+        "Played a critical role in the migration of 30% of legacy BizTalk integrations to Azure, ensuring project success through high-level technical execution.",
+        "Drive the modernization of legacy architecture and codebase standards to enhance stability and long-term code quality."
       ],
       "skills": [
         ".NET8",
+        ".NET10",
         ".NET Framework",
         "C#",
         "Azure",
+        "Architecture",
         "Biztalk",
         "Bicep IaC",
         "Docker",
@@ -63,12 +64,12 @@
         "Administrating CI/CD with TeamCity and Octopus"
       ],
       "achievements": [
-        "Engaged in diverse client projects",
-        "Maintained great collaboration with clients and colleagues",
-        "Gained recognition as a technically competent developer"
+        "Executed technical deliverables for a wide range of client projects, ensuring alignment with business goals.",
+        "Collaborated effectively with stakeholders and internal teams to translate complex requirements into scalable technical solutions.",
+        "Established a reputation for technical proficiency by consistently delivering stable, high-quality code and resolving critical system issues."
       ],
       "skills": [
-        ".NET",
+        ".NET5",
         ".NET Framework",
         "C#",
         "Azure",
@@ -105,12 +106,13 @@
         "Setting up and maintaining CI/CD with TeamCity and Octopus"
       ],
       "achievements": [
-        "Successfully worked with all parts of the product with different stakeholders",
-        "Participated in taking the solution from old-school .NET to modern cloud-based",
-        "Esteemed as a valuable and competent colleague and known for delivering high-quality"
+        "Managed full-stack development and feature delivery across the entire product lifecycle, coordinating effectively with diverse stakeholders.",
+        "Contributed to the architectural evolution of the platform, migrating legacy .NET systems to a modern, cloud-based infrastructure.",
+        "Consistently delivered high-quality, stable code, establishing a reputation for technical excellence and reliability within the team."
       ],
       "skills": [
-        ".NET",
+        ".NET Core",
+        ".NET Framework",
         "C#",
         "Azure",
         "CI/CD",
@@ -144,8 +146,8 @@
         "Participate in innovation projects"
       ],
       "achievements": [
-        "Quickly learned several different technologies and stacks",
-        "Took responsibility of whole FE stack in a project"
+        "Demonstrated high learning agility by rapidly mastering and implementing multiple technology stacks to meet evolving project requirements.",
+        "Assumed full ownership of the front-end architecture and implementation for a key project, ensuring a consistent and responsive user experience."
       ],
       "skills": [
         "React Native",
@@ -162,18 +164,58 @@
   ],
   "certifications": [
     {
+      "name": "TOGAF® Enterprise Architecture Foundation",
+      "issuingOrganization": "The Open Group",
+      "issueDate": "2025-12",
+      "url": "https://www.credly.com/badges/0ac06d3a-483d-406e-b21c-61168281927b/public_url",
+      "skills": [
+        "Enterprise Architecture",
+        "Architecture Governance",
+        "Business Architecture",
+        "Data Architecture",
+        "Application Architecture",
+        "Technology Architecture",
+        "Stakeholder Management",
+        "Strategic Planning",
+        "Digital Transformation"
+      ]
+    },
+    {
       "name": "Microsoft Certified: Azure Developer Associate",
       "issuingOrganization": "Microsoft",
       "issueDate": "2023-01",
       "url": "https://learn.microsoft.com/api/credentials/share/en-us/MaxWallin-0718/FEA71CB95B51EEE5",
-      "skills": [".NET", "Azure", "Cloud"]
+      "skills": [
+        ".NET",
+        "Azure",
+        "Cloud Computing",
+        "Azure App Service",
+        "Azure Functions",
+        "Azure Cosmos DB",
+        "Azure Storage",
+        "Azure Service Bus",
+        "Azure Event Hubs",
+        "Azure Key Vault",
+        "API Management",
+        "Docker",
+        "Infrastructure as Code (IaC)",
+        "Identity Management (Entra ID)"
+      ]
     },
     {
       "name": "Professional Scrum Master I",
       "issuingOrganization": "Scrum.org",
       "issueDate": "2019-05",
       "url": "https://www.scrum.org/certificates/413818",
-      "skills": ["Scrum", "Agile"]
+      "skills": [
+        "Scrum",
+        "Agile Methodology",
+        "Scrum Framework",
+        "Facilitation",
+        "Team Leadership",
+        "Product Backlog Management",
+        "Incremental Delivery"
+      ]
     }
   ],
   "education": [

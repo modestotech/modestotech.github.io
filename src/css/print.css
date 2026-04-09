@@ -1,74 +1,99 @@
-#resume-logo {
-    display: block;
-    position: absolute;
-    top: 3mm;
-    right: 2mm;
-}
+@media print {
+    /* 1. Visibility and Layout Resets */
+    header, footer, .ad-banner, #cc-main, #print-button, .certificate-link {
+        display: none !important;
+    }
 
-header, footer, .ad-banner {
-    display: none;
-}
+    #resume-logo {
+        display: block;
+        position: absolute;
+        top: 3mm;
+        right: 2mm;
+    }
 
-#cc-main {
-    display: none;
-}
+    #contact-section {
+        display: block;
+    }
 
-#contact-section {
-    display: block;
-}
+    #main-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-#print-button {
-    display: none;
-}
+    /* 2. Typography and Spacing */
+    #main-container h1 { margin: 0 0 2mm 0; }
+    #main-container h2 { margin: 0 0 4mm 0; }
 
-#main-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+    .resume-section {
+        margin: 0.6cm 0 0 0; /* Slightly reduced for paper fit */
+    }
 
-#main-container h1 {
-    margin-top: 0;
-    margin-bottom: 2mm;
-}
+    .resume-section h2 {
+        margin: 0;
+        break-after: avoid;
+    }
 
-#main-container h2 {
-    margin-top: 0;
-    margin-bottom: 4mm;
-}
+    .experience-sub-header {
+        margin: 0;
+    }
 
-#profile-image-container {
-    margin-left: 0.5cm;
-    margin-right: 0.2cm;
-}
+    /* 3. Card Styling for Print */
+    .resume-card {
+        all: unset;
+        display: block;
+        margin-bottom: 4mm;
+        border-bottom: 1px solid #eee; /* Light separator for print */
+        padding-bottom: 2mm;
+    }
 
-.resume-section {
-    margin: 0.8cm 0 0 0;
-}
+    .resume-card h3 {
+        margin-bottom: 0;
+    }
 
-.resume-section h2 {
-    margin: 0;
-    break-after: avoid;
-}
+    .resume-card .card-body {
+        padding: 2mm 0 0 0;
+    }
 
-.experience-sub-header {
-    margin: 0;
-}
+    .certificate-link {
+        display: none;
+    }
 
-.resume-card {
-    all: unset; /* Removes all styling */
-    display: block; /* Ensure it remains a block-level element */
-    break-inside: avoid;
-}
+    /* 4. Grid Logic for Paper (A4/Letter) */
+    .attribute-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        list-style-type: disc !important;
+    }
 
-.resume-card h3 {
-    margin-bottom: 0;
-}
+    /* Big: Always 1 col */
+    .attribute-list .big {
+        width: 100% !important;
+        margin-bottom: 1mm !important;
+    }
 
-.resume-card .card-body {
-    padding: 3mm 0 0 0;
-}
+    /* Medium: 2 cols for print (3 was often too tight) */
+    .attribute-list .medium {
+        width: 50% !important;
+        margin-bottom: 1mm !important;
+    }
 
-.certificate-link {
-    display: none;
+    /* Small: 3 cols for print (4 is usually too cramped for paper) */
+    .attribute-list .small {
+        width: 33.3333% !important;
+        margin-bottom: 1mm !important;
+        font-size: 0.9em; /* Slightly smaller for density */
+    }
+
+    /* Ensure metadata (Org, Date) spreads out on paper */
+    .flex-wrap.justify-between {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    #profile-image-container {
+        margin-left: 0.5cm;
+        margin-right: 0.2cm;
+    }
 }
