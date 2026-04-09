@@ -31,6 +31,7 @@
       "skills": [
         ".NET8",
         ".NET10",
+        "Integration patterns",
         ".NET Framework",
         "C#",
         "Azure",
@@ -38,10 +39,11 @@
         "Biztalk",
         "Bicep IaC",
         "Docker",
-        "CI/CD",
+        "Azure DevOps CI/CD",
         "MSSQL",
         "Dynamics CRM",
-        "Git"
+        "Git",
+        "Protobuf"
       ]
     },    {
       "show": true,
@@ -229,7 +231,7 @@
         "start": "2008-01",
         "end": "2012-02"
       },
-      "skills": ["Leadership", "Change Management", "Financial analysis", "Statistical Analysis"]
+      "skills": ["Financial Modeling", "Corporate Finance", "Business Strategy", "Statistical Analysis", "Accounting", "Economics", "Risk Management", "Budgeting"]
     },
     {
       "show": true,
@@ -241,7 +243,7 @@
         "start": "2012-06",
         "end": "2017-01"
       },
-      "skills": ["Linguistics", "Portuguese", "Brazilian Portuguese", "Comparative Literature"]
+      "skills": ["Portuguese", "Brazilian Portuguese", "Academic Writing", "Literary Analysis", "Research", "Translation", "Linguistics", "Discourse Analysis"]
     },
     {
       "show": true,
@@ -253,7 +255,7 @@
         "start": "2012-06",
         "end": "2017-01"
       },
-      "skills": ["Mobile Apps", "Swift", "Java", "Kotlin"]
+      "skills": ["Swift", "Kotlin", "Java", "iOS Development", "Android Development", "Mobile UI/UX", "REST APIs", "Git"]
     }
   ]
 }
