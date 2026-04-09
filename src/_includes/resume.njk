@@ -64,12 +64,14 @@ layout: base.njk
             <h3>{{ experience.position }} at {{ experience.company }}</h3>
 
             <div class="card-intro">
-                <ul class="experience-details-not-dotted-list flex flex-wrap">
-                    <li><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</p>
-                    <li><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</p>
-                    <li><strong>Allocation:</strong> {{ experience.allocation }}</p>
-                    <li><strong>Type:</strong> {{ experience.type }}</p>
-                </ul>
+                <div class="flex flex-col gap-4">
+                    <div class="meta-row two-rows">
+                        <span><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</span>
+                        <span><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</span>
+                        <span><strong>Allocation:</strong> {{ experience.allocation }}</span>
+                        <span><strong>Type:</strong> {{ experience.type }}</span>
+                    </div>
+                </div>
             </div>
 
             <div class="card-section">
@@ -118,10 +120,12 @@ layout: base.njk
         <div class="card-body">
             <h3>{{ certification.name }}</h3>
             <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap justify-between items-center gap-x-6 gap-y-2 text-sm w-full">
-                    <span><strong>Organization:</strong> {{ certification.issuingOrganization }}</span>
-                    <span><strong>Date:</strong> {{ certification.issueDate }}</span>
-                    <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500 hover:underline">Click here</a></span>
+                <div class="card-intro">
+                    <div class="meta-row">
+                        <span><strong>Organization:</strong> {{ certification.issuingOrganization }}</span>
+                        <span><strong>Date:</strong> {{ certification.issueDate }}</span>
+                        <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500 hover:underline">Click here</a></span>
+                    </div>
                 </div>
 
                 <div>
@@ -147,12 +151,14 @@ layout: base.njk
             <h3>{{ course.name }}</h3>
             
             <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap justify-between items-center gap-x-6 gap-y-2 text-sm w-full">
-                    <span class="text-sm italic">{{ course.degree }} from {{ course.school }}</span>
-                    {% if featureToggles.resume.showEducationDescription %}
-                    <span class="text-xs flex-1 px-4 text-center">{{ course.description | safe }}</span>
-                    {% endif %}
-                    <p><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</p>
+                <div class="card-intro">
+                    <div class="meta-row">
+                        <span class="text-sm italic">{{ course.degree }} from {{ course.school }}</span>
+                        {% if featureToggles.resume.showEducationDescription %}
+                        <span class="text-xs flex-1 px-4 text-center">{{ course.description | safe }}</span>
+                        {% endif %}
+                        <p><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</p>
+                    </div>
                 </div>
 
                 <div>
