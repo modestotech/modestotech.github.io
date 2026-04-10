@@ -47,7 +47,7 @@
     }
 
     #main-container > *:nth-child(n+3):not(:last-child) {
-        border-bottom: 0.5mm solid #eee;
+        border-bottom: 0.5mm solid black;
     }
 
     /* 2. Typography and Spacing */
@@ -101,7 +101,7 @@
     }
 
     .resume-section .resume-card:not(:last-child) {
-            border-bottom: 0.3mm solid #eee;
+            border-bottom: 0.3mm solid grey;
     }
 
 
@@ -111,7 +111,7 @@
 
     .resume-card .card-body .card-intro {
         padding-bottom: 3mm;
-        border-bottom: 0.1mm solid #eee;
+        border-bottom: 0.1mm solid gainsboro;
         break-inside: avoid;
         break-after: avoid;
     }
