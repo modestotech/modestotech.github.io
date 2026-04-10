@@ -65,13 +65,11 @@ layout: base.njk
             <h4>{{ experience.company }}</h4>
 
             <div class="card-intro">
-                <div class="flex flex-col gap-4">
-                    <div class="meta-row two-rows">
-                        <span><span class="meta-category">Location:</span> {{ experience.location.city }}, {{ experience.location.country }}</span>
-                        <span><span class="meta-category">Duration:</span> {{ experience.duration.start }} — {{ experience.duration.end }}</span>
-                        <span><span class="meta-category">Allocation:</span> {{ experience.allocation }}</span>
-                        <span><span class="meta-category">Type:</span> {{ experience.type }}</span>
-                    </div>
+                <div class="meta-row two-rows">
+                    <span><span class="meta-category">Location:</span> {{ experience.location.city }}, {{ experience.location.country }}</span>
+                    <span><span class="meta-category">Duration:</span> {{ experience.duration.start }} — {{ experience.duration.end }}</span>
+                    <span><span class="meta-category">Allocation:</span> {{ experience.allocation }}</span>
+                    <span><span class="meta-category">Type:</span> {{ experience.type }}</span>
                 </div>
             </div>
 
@@ -120,24 +118,24 @@ layout: base.njk
     <div class="resume-card">
         <div class="card-body">
             <h3>{{ certification.name }}</h3>
-            <div class="flex flex-col gap-4">
-                <div class="card-intro">
-                    <div class="meta-row">
-                        <span><strong>Organization:</strong> {{ certification.issuingOrganization }}</span>
-                        <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500 hover:underline">Click here</a></span>
-                        <span><strong>Date:</strong> {{ certification.issueDate }}</span>
-                    </div>
-                </div>
 
-                <div>
-                    <h4 class="meta-category">Skills:</h4>
-                    <ul class="attribute-list">
-                        {% for skill in certification.skills %}
-                            <li class="medium">{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
+            <div class="card-intro">
+                <div class="meta-row">
+                    <span><strong>Organization:</strong> {{ certification.issuingOrganization }}</span>
+                    <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500 hover:underline">Click here</a></span>
+                    <span><strong>Date:</strong> {{ certification.issueDate }}</span>
                 </div>
             </div>
+
+            <div class="card-section">
+                <h4 class="meta-category">Skills:</h4>
+                <ul class="attribute-list">
+                    {% for skill in certification.skills %}
+                        <li class="medium">{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
         </div>
     </div>
     {% endfor %}
@@ -150,25 +148,23 @@ layout: base.njk
     <div class="resume-card">
         <div class="card-body">
             <h3>{{ course.name }}</h3>
-            
-            <div class="flex flex-col gap-4">
-                <div class="card-intro">
-                    <div class="meta-row">
-                        <span><strong>Degree:</strong> {{ course.degree }}</span>
-                        <span><strong>School:</strong> {{ course.school }}</span>
-                        <span><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="meta-category">Skills:</h4>
-                    <ul class="attribute-list">
-                        {% for skill in course.skills %}
-                            <li class="small">{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
+            <div class="card-intro">
+                <div class="meta-row">
+                    <span><strong>Degree:</strong> {{ course.degree }}</span>
+                    <span><strong>School:</strong> {{ course.school }}</span>
+                    <span><strong>Time:</strong> {{ course.duration.start }} — {{ course.duration.end }}</span>
                 </div>
             </div>
+
+            <div class="card-section">
+                <h4 class="meta-category">Skills:</h4>
+                <ul class="attribute-list">
+                    {% for skill in course.skills %}
+                        <li class="small">{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
         </div>
     </div>
     {% endif %}

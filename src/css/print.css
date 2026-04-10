@@ -107,21 +107,17 @@
 
     .resume-card .card-body {
         padding: 0;
-        gap: 0.5mm
     }
 
     .resume-card .card-body .card-intro {
-        padding-bottom: 2mm;
+        padding-bottom: 3mm;
         border-bottom: 0.1mm solid #eee;
+        break-inside: avoid;
+        break-after: avoid;
     }
 
     .certificate-link {
         display: none;
-    }
-
-    .card-intro {
-        break-inside: avoid;
-        break-after: avoid;
     }
 
     .card-section {

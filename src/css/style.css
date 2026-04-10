@@ -47,8 +47,8 @@
   @apply mb-1
 }
 
-.resume-card .card-intro {
-  @apply mb-3
+.resume-card .card-body .card-intro {
+  @apply flex flex-col;
 }
 
 .resume-card .card-section {
