@@ -15,16 +15,24 @@
     width: 48%;
 }
 
-.experience-sub-header {
-  @apply font-semibold mt-3 mb-1
+.meta-category {
+  @apply font-semibold
 }
 
 .resume-section {
-  @apply mt-6;
+  @apply mb-4;
 }
 
 .resume-section h2 {
   @apply text-xl font-semibold mb-3
+}
+
+#resume-intro-section {
+  @apply pb-4;
+}
+
+#resume-intro-section > #resume-text {
+  @apply py-2;
 }
 
 .resume-card {
@@ -32,8 +40,21 @@
 }
 
 .resume-card h3 {
-  @apply card-title text-xl mb-2
+  @apply card-title text-xl
 }
+
+.resume-card h4 {
+  @apply mb-1
+}
+
+.resume-card .card-intro {
+  @apply mb-3
+}
+
+.resume-card .card-section {
+  @apply mb-2
+}
+
 
 /* --- Attribute Lists (Achievements & Skills) --- */
 
