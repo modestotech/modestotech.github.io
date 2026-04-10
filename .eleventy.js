@@ -14,6 +14,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
   eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - 2017);
+  eleventyConfig.addShortcode("fullName", () => "Max Modesto Wallin");
+  eleventyConfig.addShortcode("title", () => "Senior System Developer");
   
   return {
     dir: {

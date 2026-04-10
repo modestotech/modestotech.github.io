@@ -4,7 +4,7 @@ jsModuleFiles:
 layout: base.njk
 ---
 
-<div id="contact-section" class="hidden mx-2 mb-3">
+<div id="contact-section" class="hidden mx-2 pb-3 mb-2">
     <div id="contact-container" class="flex flex-row flex-wrap space-y-1">
         <!-- Email -->
         <div class="flex items-center space-x-2
@@ -31,11 +31,10 @@ layout: base.njk
         </div>
 
     </div>
-    <hr class="h-0.5 my-4 bg-base-300">
 </div>
 
 <div id="resume-intro-section" class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2">
-    <div class="flex-1">
+    <div id="resume-text" class="flex-1">
         <div class="text-base space-y-4">{{ content | safe }}</div>
     </div>
     <div class="flex flex-col items-center ml-5">
@@ -50,7 +49,7 @@ layout: base.njk
                 >
             </div>
         </div>
-        <button id="print-button" class="btn btn-primary mt-4 leading-4">
+        <button id="print-button" class="btn btn-primary mt-4 leading-4 hidden sm:block">
             Print Formatted <br> Resume
         </button>
     </div>
@@ -62,21 +61,22 @@ layout: base.njk
     {% if experience.show %}
     <div class="resume-card">
         <div class="card-body">
-            <h3>{{ experience.position }} at {{ experience.company }}</h3>
+            <h3>{{ experience.position }}</h3>
+            <h4>{{ experience.company }}</h4>
 
             <div class="card-intro">
                 <div class="flex flex-col gap-4">
                     <div class="meta-row two-rows">
-                        <span><strong>Location:</strong> {{ experience.location.city }}, {{ experience.location.country }}</span>
-                        <span><strong>Duration:</strong> {{ experience.duration.start }} — {{ experience.duration.end }}</span>
-                        <span><strong>Allocation:</strong> {{ experience.allocation }}</span>
-                        <span><strong>Type:</strong> {{ experience.type }}</span>
+                        <span><span class="meta-category">Location:</span> {{ experience.location.city }}, {{ experience.location.country }}</span>
+                        <span><span class="meta-category">Duration:</span> {{ experience.duration.start }} — {{ experience.duration.end }}</span>
+                        <span><span class="meta-category">Allocation:</span> {{ experience.allocation }}</span>
+                        <span><span class="meta-category">Type:</span> {{ experience.type }}</span>
                     </div>
                 </div>
             </div>
 
             <div class="card-section">
-                <h4 class="experience-sub-header">Responsibilities:</h4>
+                <h4 class="meta-category">Responsibilities:</h4>
                 <ul class="attribute-list">
                     {% for responsibility in experience.responsibilities %}
                     <li class="big">{{ responsibility }}</li>
@@ -85,7 +85,7 @@ layout: base.njk
             </div>
 
             <div class="card-section">
-                <h4 class="experience-sub-header">Achievements:</h4>
+                <h4 class="meta-category">Achievements:</h4>
                 <ul class="attribute-list">
                     {% for achievement in experience.achievements %}
                     <li class="big">{{ achievement }}</li>
@@ -94,7 +94,7 @@ layout: base.njk
             </div>
 
             <div class="card-section">
-                <h4 class="experience-sub-header">Skills:</h4>
+                <h4 class="meta-category">Skills:</h4>
                 <ul class="attribute-list">
                     {% for skill in experience.skills %}
                     <li class="small">{{ skill }}</li>
@@ -130,7 +130,7 @@ layout: base.njk
                 </div>
 
                 <div>
-                    <h4 class="experience-sub-header">Skills:</h4>
+                    <h4 class="meta-category">Skills:</h4>
                     <ul class="attribute-list">
                         {% for skill in certification.skills %}
                             <li class="medium">{{ skill }}</li>
@@ -161,7 +161,7 @@ layout: base.njk
                 </div>
 
                 <div>
-                    <h4 class="experience-sub-header">Skills:</h4>
+                    <h4 class="meta-category">Skills:</h4>
                     <ul class="attribute-list">
                         {% for skill in course.skills %}
                             <li class="small">{{ skill }}</li>

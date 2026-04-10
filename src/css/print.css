@@ -46,6 +46,10 @@
         padding: 0;
     }
 
+    #main-container > *:nth-child(n+3):not(:last-child) {
+        border-bottom: 0.5mm solid #eee;
+    }
+
     /* 2. Typography and Spacing */
     #main-container h1 {
         display: block !important;
@@ -58,7 +62,7 @@
     #main-container h2 {
         display: block !important;
         margin: 0 !important;
-        padding-bottom: 1mm !important;
+        padding-bottom: 3mm !important;
         break-after: avoid;
         break-inside: avoid; /* NEW */
     }
@@ -68,7 +72,11 @@
     }
     
     #main-container h3 {
-        margin: 0 !important;
+        break-after: avoid;
+        break-inside: avoid; /* NEW */
+    }
+
+    #main-container h4 {
         break-after: avoid;
         break-inside: avoid; /* NEW */
     }
@@ -89,12 +97,22 @@
         all: unset;
         display: block;
         margin-bottom: 4mm;
-        border-bottom: 1px solid #eee;
         padding-bottom: 2mm;
     }
 
+    .resume-section .resume-card:not(:last-child) {
+            border-bottom: 0.3mm solid #eee;
+    }
+
+
     .resume-card .card-body {
-        padding: 2mm 0 0 0;
+        padding: 0;
+        gap: 0.5mm
+    }
+
+    .resume-card .card-body .card-intro {
+        padding-bottom: 2mm;
+        border-bottom: 0.1mm solid #eee;
     }
 
     .certificate-link {
