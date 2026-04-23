@@ -2,13 +2,49 @@
   "experiences": [
     {
       "show": true,
-      "position": "Integration Developer (consultant through Consid AB)",
+      "position": "Integrations and Cloud Specialist (through Consid AB)",
       "company": "Öresundsbrokonsortiet",
       "allocation": "100%",
-      "type": "Permanent position",
+      "type": "Consultant",
+      "duration": {
+        "start": "2026-02",
+        "end": "Ongoing"
+      },
+      "location": {
+        "city": "Malmö / Remote",
+        "country": "Sweden"
+      },
+      "responsibilities": [
+        "Specialist work for a migration project related to tolling system integrations",
+        "Work with all parts related to this domain: architecture, requirements, CI/CD, development, etc.",
+        "Work with, among other, these Azure components: Container Apps, API Management (APIM), Storage Account, ServiceBus, Keyvault, Container Registry"
+      ],
+      "achievements": [
+        "To a high degree designing and implementing the new cloud solution on my own.",
+        "Played a decisive role with my domain knowledge and competence, in the success of the project."
+      ],
+      "skills": [
+        ".NET10",
+        "Integration patterns",
+        "C#",
+        "Azure",
+        "Architecture",
+        "Bicep IaC",
+        "Docker",
+        "Azure DevOps CI/CD",
+        "Git",
+        "Protobuf"
+      ]
+    },
+    {
+      "show": true,
+      "position": "Integration Developer (through Consid AB)",
+      "company": "Öresundsbrokonsortiet",
+      "allocation": "100%",
+      "type": "Consultant in team delivery",
       "duration": {
         "start": "2024-10",
-        "end": "Ongoing"
+        "end": "2026-01"
       },
       "location": {
         "city": "Malmö / Remote",
@@ -24,7 +60,6 @@
         "Infrastructura as Code development for Azure with bicep"
       ],
       "achievements": [
-        "Designing and implementing the architectural migration of the integration suite for data transfer between toll stations and ÖSB systems.",
         "Played a critical role in the migration of 30% of legacy BizTalk integrations to Azure, ensuring project success through high-level technical execution.",
         "Drive the modernization of legacy architecture and codebase standards to enhance stability and long-term code quality."
       ],
@@ -45,12 +80,13 @@
         "Git",
         "Protobuf"
       ]
-    },    {
+    },
+    {
       "show": true,
       "position": "System Developer (consultant through Avensia AB)",
       "company": "Multiple client projects",
       "allocation": "100%",
-      "type": "Permanent position",
+      "type": "Consultant in team projects mainly",
       "duration": {
         "start": "2021-10",
         "end": "2024-04"
