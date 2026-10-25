@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Always reserve scrollbar space so the layout doesn't shift between short and long pages */
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
 /* Resume */
 .meta-row {
     display: flex;
