@@ -2,7 +2,6 @@
   "name": "modesto-software",
   "version": "1.0.0",
   "description": "Modesto Software Static Site",
-  "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:eleventy\" \"npm run dev:tailwind\"",
     "dev:eleventy": "npx @11ty/eleventy --serve",
