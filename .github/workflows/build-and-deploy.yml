@@ -3,6 +3,9 @@ name: Publish static site
 on:
   push:
     branches: [ "main" ]
+  # Build and test (including spell check) pull requests, but don't deploy them
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -19,7 +22,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22
+          node-version-file: .nvmrc
       - name: Build and test
         run: |
           npm ci
@@ -32,6 +35,7 @@ jobs:
   deploy:
     # Add a dependency to the build job
     needs: build
+    if: github.event_name != 'pull_request'
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
