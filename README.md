@@ -15,7 +15,7 @@ npm test      # spell check + build + sanity tests (test/)
 npm run spellcheck  # spell check only
 ```
 
-Pull requests to `main` are built and tested; pushing to `main` also deploys, via `.github/workflows/build-and-deploy.yml`.
+Pull requests to `main` are built and tested by `.github/workflows/ci.yml`; pushing to `main` builds, tests and deploys via `.github/workflows/deploy.yml`.
 
 Spell check uses [cspell](https://cspell.org/) on the site content and this README. If it flags a correctly spelled name or term, add it to `words` in `cspell.json`.
 
