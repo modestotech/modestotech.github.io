@@ -53,6 +53,13 @@ test("resume and contact are noindex", () => {
   assert.doesNotMatch(read("index.html"), /name="robots"/);
 });
 
+test("start page has Open Graph tags with absolute image URL", () => {
+  const html = read("index.html");
+  assert.match(html, /<meta property="og:title" content="[^"]+">/);
+  assert.match(html, /<meta property="og:description" content="[^"]+">/);
+  assert.match(html, /<meta property="og:image" content="https:\/\/[^"]+\.(png|jpe?g|webp)">/);
+});
+
 test("local links and assets resolve", () => {
   for (const page of pages) {
     const urls = [...read(page).matchAll(/(?:src|href)="(\/[^"]*)"/g)].map((m) => m[1]);
