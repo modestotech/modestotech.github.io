@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: 22
       - name: Build
-        working-directory: './src'
         run: |
           npm ci
           npm run build
