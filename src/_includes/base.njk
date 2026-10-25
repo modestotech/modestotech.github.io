@@ -12,14 +12,23 @@
 
     <meta name="description" content="{{metaDescription}}">
     <meta name="author" content="{{ site.fullName }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Modesto Software">
+    <meta property="og:title" content="{{ title or 'Modesto Software' }}">
+    {% if metaDescription %}
+    <meta property="og:description" content="{{ metaDescription }}">
+    {% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ image or '/images/profile-2024.png' }}">
+    <meta name="twitter:card" content="summary">
     {% if noindex %}
     <meta name="robots" content="noindex">
     {% endif %}
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      script-src 'self' https://www.googletagmanager.com;
-      connect-src 'self' https://*.google-analytics.com;
-      img-src 'self' https://www.googletagmanager.com;
+      script-src 'self' https://gc.zgo.at;
+      connect-src 'self' https://modestosoftware.goatcounter.com;
+      img-src 'self' https://modestosoftware.goatcounter.com;
       font-src 'self';
       style-src 'self' 'unsafe-inline';
       object-src 'none';
@@ -40,6 +49,8 @@
     <link rel="icon" href="/modesto_software_favicon_for_light_mode.ico" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/modesto_software_favicon_for_dark_mode.ico" media="(prefers-color-scheme: dark)">
 
+    <script src="/js/initTheme.js"></script>
+
     <link href="/output.css" rel="stylesheet">
     <link href="/css/print.css" rel="stylesheet" media="print"/>
     <link href="/css/boxicons.min.css" rel="stylesheet">
@@ -47,8 +58,6 @@
     {% if css %}
     <link rel="stylesheet" href="{{css}}" />
     {% endif %}
-
-    <link rel="stylesheet" href="/css/cookieconsent.css">
 
     {% for jsFilePath in jsModuleFiles %}
     <script type="module" src="{{ jsFilePath }}"></script>
@@ -64,12 +73,11 @@
     <script src="{{ jsFilePath }}" async defer></script>
     {% endfor %}
 
-    <!-- Google tag (gtag.js) -->
-    <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
-    <script type="text/plain" data-category="analytics" src="/js/analytics.js"></script>
+    <!-- GoatCounter: cookieless analytics, see README -->
+    <script data-goatcounter="https://modestosoftware.goatcounter.com/count" async src="https://gc.zgo.at/count.v4.js"
+      crossorigin="anonymous" integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+"></script>
   </head>
   <body class="flex flex-col min-h-screen">
-    <script type="module" src="/js/cookieconsentConfig.js"></script>
     <!-- Header -->
     <header class="bg-base-200">
       <div class="navbar pl-1 pr-4 md:px-6">
@@ -106,7 +114,7 @@
         </div>
 
         <!-- Theme toggle and logo -->
-        <div class="navbar-end hidden" id="theme-toggle-container">
+        <div class="navbar-end">
           <div class="flex items-center space-x-3 md:space-x-6">
             <!-- Theme Toggle -->
             <label for="theme-toggle" class="sr-only">Toggle Theme</label>
@@ -115,11 +123,13 @@
             <!-- Company Logo -->
             {% if(page.url === "/") %}
             <div class="flex items-center">
-              <img src="" alt="Company Logo" id="navbar-logo" class="w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_light_mode.webp" alt="Company Logo" class="dark:hidden w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_dark_mode.webp" alt="Company Logo" class="hidden dark:block w-10 md:w-14 h-auto"/>
             </div>
             {% else %}
             <a href="/" class="flex items-center">
-              <img src="" alt="Company Logo" id="navbar-logo" class="w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_light_mode.webp" alt="Company Logo" class="dark:hidden w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_dark_mode.webp" alt="Company Logo" class="hidden dark:block w-10 md:w-14 h-auto"/>
             </a>
             {% endif %}
           </div>
