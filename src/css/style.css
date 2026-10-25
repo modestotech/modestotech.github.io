@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
+/* Skip daisyUI's root scrollbar gutter. It only reserves the gutter on pages that scroll,
+   and it overrides our "scrollbar-gutter: stable" below, so content jumps between pages. */
+@plugin "daisyui" {
+  exclude: rootscrollgutter;
+}
 
 /* Tailwind's dark: variant follows the "dark" class set by initTheme.js, not the OS setting */
 @custom-variant dark (&:where(.dark, .dark *));

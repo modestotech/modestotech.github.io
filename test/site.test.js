@@ -75,3 +75,9 @@ test("resume and contact have every contact slot", () => {
     assert.deepStrictEqual(slots, ["email", "github", "linkedin", "phone"], page);
   }
 });
+
+test("scrollbar gutter is always reserved, so pages don't shift", () => {
+  // daisyUI 5 adds a :root rule that only reserves it on scrolling pages; we exclude it
+  const rules = read("output.css").match(/[^{}]*\{[^{}]*scrollbar-gutter[^}]*\}/g) || [];
+  assert.deepStrictEqual(rules, ["html{scrollbar-gutter:stable}"]);
+});
