@@ -20,10 +20,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build
+      - name: Build and test
         run: |
           npm ci
-          npm run build
+          npm test
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
