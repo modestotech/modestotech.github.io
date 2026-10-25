@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+/* Tailwind's dark: variant follows the "dark" class set by initTheme.js, not the OS setting */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Always reserve scrollbar space so the layout doesn't shift between short and long pages */
 @layer base {
@@ -11,12 +14,12 @@
 
 /* In dark mode, draw the theme toggle as "on" from the start.
    Otherwise it shows "off" for a moment and slides over once the JavaScript runs.
-   These are the same two settings DaisyUI uses for a toggle that is on. */
+   These are the same settings DaisyUI uses for a toggle that is on. */
 [data-theme="dark"] #theme-toggle {
-  --handleoffsetcalculator: var(--handleoffset); /* knob on the right */
-  /* Full-strength color: the theme's text color ("bc") at 100% opacity.
-     When off, DaisyUI uses the same color at 50% opacity, which looks dull. */
-  color: var(--fallback-bc,oklch(var(--bc)/1));
+  grid-template-columns: 1fr 1fr 0fr; /* knob on the right */
+  background-color: var(--color-base-100);
+  /* Full-strength text color. When off, DaisyUI mixes it to 50%, which looks dull. */
+  --input-color: var(--color-base-content);
 }
 
 /* Resume */
