@@ -1,19 +1,20 @@
+// Email and phone are base64-encoded to keep them out of plain-text scrapes
 const contactInfo = {
-  email: "max@modestosoftware.com",
-  phone: "[redacted]",
+  email: "bWF4QG1vZGVzdG9zb2Z0d2FyZS5jb20=",
+  phone: "KzQ2NzA1NjMxNTcx",
   linkedinHandle: "maxmw",
   githubHandle: "modestotech",
 };
 
 export function getContactLinkElements() {
     // Email
-    const email = contactInfo.email;
+    const email = atob(contactInfo.email);
     const emailElement = document.createElement('a');
     emailElement.href = `mailto:${email}`;
     emailElement.textContent = email;
 
     // Phone
-    const phone = contactInfo.phone;
+    const phone = atob(contactInfo.phone);
     const phoneElement = document.createElement('a');
     phoneElement.href = `tel:${phone}`;
     phoneElement.textContent = phone;
