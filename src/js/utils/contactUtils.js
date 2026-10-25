@@ -25,6 +25,7 @@ export function getContactLinkElements() {
     linkedinElement.href = `https://www.linkedin.com/in/${linkedInHandle}`;
     linkedinElement.textContent = `linkedin.com/in/${linkedInHandle}`;
     linkedinElement.target = '_blank';
+    linkedinElement.rel = 'noopener';
 
     // Github
     const githubHandle = contactInfo.githubHandle;
@@ -32,6 +33,7 @@ export function getContactLinkElements() {
     githubElement.href = `https://github.com/${githubHandle}`;
     githubElement.textContent = `github.com/${githubHandle}`;
     githubElement.target = '_blank';
+    githubElement.rel = 'noopener';
 
     return {
       emailElement,

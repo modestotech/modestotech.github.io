@@ -118,7 +118,7 @@ layout: base.njk
             <div class="card-intro">
                 <div class="meta-row">
                     <span><strong>Organization:</strong> {{ certification.issuingOrganization }}</span>
-                    <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" class="text-blue-500 hover:underline">Click here</a></span>
+                    <span class="certificate-link"><strong>Link:</strong> <a href="{{ certification.url }}" target="_blank" rel="noopener" class="text-blue-500 hover:underline">Click here</a></span>
                     <span><strong>Date:</strong> {{ certification.issueDate }}</span>
                 </div>
             </div>
