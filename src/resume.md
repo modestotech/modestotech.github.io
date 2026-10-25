@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Resume"
 pageHeader: "Max Modesto Wallin"
 subHeader: "Senior System Developer"
