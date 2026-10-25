@@ -96,7 +96,8 @@
         break-after: avoid;
     }
 
-    .card-section {
+    .card-section,
+    .resume-card p {
         break-inside: avoid;
     }
 
