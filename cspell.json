@@ -1,0 +1,29 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "files": ["src/**/*.{md,njk,json}", "README.md"],
+  "ignorePaths": ["_site", "node_modules", "package-lock.json"],
+  "overrides": [{ "filename": "**/*.njk", "languageId": "html" }],
+  "words": [
+    "APIM",
+    "Avensia",
+    "BizTalk",
+    "Consid",
+    "cookieless",
+    "Dalarna",
+    "Fintech",
+    "GoatCounter",
+    "Helsingborg",
+    "Högskolan",
+    "Inyett",
+    "Klarna",
+    "modestotech",
+    "Optimizely",
+    "TOGAF",
+    "transcultural",
+    "Voyado",
+    "Wallin",
+    "Yrkeshögskola",
+    "Öresundsbrokonsortiet"
+  ]
+}
