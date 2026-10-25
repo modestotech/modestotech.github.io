@@ -12,6 +12,15 @@
 
     <meta name="description" content="{{metaDescription}}">
     <meta name="author" content="{{ site.fullName }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Modesto Software">
+    <meta property="og:title" content="{{ title or 'Modesto Software' }}">
+    {% if metaDescription %}
+    <meta property="og:description" content="{{ metaDescription }}">
+    {% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ image or '/images/profile-2024.png' }}">
+    <meta name="twitter:card" content="summary">
     {% if noindex %}
     <meta name="robots" content="noindex">
     {% endif %}
