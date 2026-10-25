@@ -19,7 +19,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
-    "concurrently": "^8.2.2",
+    "concurrently": "^10.0.6",
     "cspell": "^10.4.0",
     "daisyui": "^5.7.50",
     "tailwindcss": "^4.3.3"
