@@ -9,10 +9,13 @@ Personal site for Modesto Software: landing page, resume and contact page.
 ```sh
 npm ci        # install
 npm run dev   # local server with live reload
-npm test      # build + sanity tests (test/)
+npm test      # spell check + build + sanity tests (test/)
+npm run spellcheck  # spell check only
 ```
 
-Pushing to `main` builds, tests and deploys via `.github/workflows/build-and-deploy.yml`.
+Pull requests to `main` are built and tested; pushing to `main` also deploys, via `.github/workflows/build-and-deploy.yml`.
+
+Spell check uses [cspell](https://cspell.org/) on the site content and this README. If it flags a correctly spelled name or term, add it to `words` in `cspell.json`.
 
 ## Where things live
 
