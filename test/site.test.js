@@ -46,6 +46,47 @@ test("served JS contains no plain-text email or phone number", () => {
   }
 });
 
+// Sources a CSP directive allows, e.g. { self: true, origins: ["https://gc.zgo.at"] }
+function cspSources(html, directive) {
+  const csp = html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]+)"/)[1];
+  const rule = csp.split(";").map((r) => r.trim().split(/\s+/)).find(([name]) => name === directive);
+  const sources = rule ? rule.slice(1) : [];
+  return { self: sources.includes("'self'"), origins: sources.filter((s) => s.startsWith("https://")) };
+}
+
+function allowedBy(url, { self, origins }) {
+  return url.startsWith("/") ? self : origins.includes(new URL(url).origin);
+}
+
+// The CSP fails silently in visitors' browsers, so check the pages against it here
+test("pages only load what their Content Security Policy allows", () => {
+  for (const page of pages) {
+    const html = read(page);
+    const scripts = cspSources(html, "script-src");
+
+    for (const [tag, attrs] of html.matchAll(/<script\b([^>]*)>/g)) {
+      const src = attrs.match(/\ssrc="([^"]+)"/)?.[1];
+      if (src) {
+        assert.ok(allowedBy(src, scripts), `${page}: script ${src} not in script-src`);
+      } else {
+        // Inline scripts are blocked; JSON-LD is data, not script, so it's fine
+        assert.match(attrs, /type="application\/ld\+json"/, `${page}: inline script ${tag}`);
+      }
+    }
+    assert.doesNotMatch(html, /\son[a-z]+="/, `${page}: inline event handler`);
+
+    for (const [, href] of html.matchAll(/<link[^>]*rel="stylesheet"[^>]*>/g).map((m) => m[0].match(/href="([^"]+)"/))) {
+      assert.ok(allowedBy(href, cspSources(html, "style-src")), `${page}: stylesheet ${href} not in style-src`);
+    }
+    for (const [, src] of html.matchAll(/<img[^>]*\ssrc="([^"]+)"/g)) {
+      assert.ok(allowedBy(src, cspSources(html, "img-src")), `${page}: image ${src} not in img-src`);
+    }
+
+    const counter = html.match(/data-goatcounter="([^"]+)"/)[1];
+    assert.ok(allowedBy(counter, cspSources(html, "connect-src")), `${page}: GoatCounter endpoint not in connect-src`);
+  }
+});
+
 test("resume and contact are noindex", () => {
   for (const page of ["resume/index.html", "contact/index.html"]) {
     assert.match(read(page), /<meta name="robots" content="noindex">/, page);
