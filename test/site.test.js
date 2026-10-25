@@ -28,19 +28,17 @@ test("pages exist and have a title", () => {
   }
 });
 
-test("analytics scripts wait for cookie consent", () => {
-  const html = read("index.html");
-  const analyticsTags = html.match(/<script[^>]*(googletagmanager|analytics\.js)[^>]*>/g);
-  assert.ok(analyticsTags && analyticsTags.length === 2);
-  for (const tag of analyticsTags) {
-    assert.match(tag, /type="text\/plain"/, tag);
-    assert.match(tag, /data-category="analytics"/, tag);
+test("only cookieless analytics, no cookie banner", () => {
+  for (const page of pages) {
+    const html = read(page);
+    assert.doesNotMatch(html, /googletagmanager|google-analytics|cookieconsent/, page);
+    assert.strictEqual(html.match(/<script[^>]*data-goatcounter=/g)?.length, 1, page);
   }
 });
 
 test("served JS contains no plain-text email or phone number", () => {
   const ownScripts = listFiles(path.join(siteDir, "js"))
-    .filter((f) => f.endsWith(".js") && !f.endsWith("cookieconsent.umd.js"));
+    .filter((f) => f.endsWith(".js"));
   for (const file of ownScripts) {
     const js = fs.readFileSync(file, "utf8");
     assert.doesNotMatch(js, /[\w.+-]+@[\w-]+\.[a-z]{2,}/i, file);

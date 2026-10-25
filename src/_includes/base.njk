@@ -17,9 +17,9 @@
     {% endif %}
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      script-src 'self' https://www.googletagmanager.com;
-      connect-src 'self' https://*.google-analytics.com;
-      img-src 'self' https://www.googletagmanager.com;
+      script-src 'self' https://gc.zgo.at;
+      connect-src 'self' https://modestosoftware.goatcounter.com;
+      img-src 'self' https://modestosoftware.goatcounter.com;
       font-src 'self';
       style-src 'self' 'unsafe-inline';
       object-src 'none';
@@ -48,8 +48,6 @@
     <link rel="stylesheet" href="{{css}}" />
     {% endif %}
 
-    <link rel="stylesheet" href="/css/cookieconsent.css">
-
     {% for jsFilePath in jsModuleFiles %}
     <script type="module" src="{{ jsFilePath }}"></script>
     {% endfor %}
@@ -64,12 +62,11 @@
     <script src="{{ jsFilePath }}" async defer></script>
     {% endfor %}
 
-    <!-- Google tag (gtag.js) -->
-    <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
-    <script type="text/plain" data-category="analytics" src="/js/analytics.js"></script>
+    <!-- GoatCounter: cookieless analytics, see README -->
+    <script data-goatcounter="https://modestosoftware.goatcounter.com/count" async src="https://gc.zgo.at/count.v4.js"
+      crossorigin="anonymous" integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+"></script>
   </head>
   <body class="flex flex-col min-h-screen">
-    <script type="module" src="/js/cookieconsentConfig.js"></script>
     <!-- Header -->
     <header class="bg-base-200">
       <div class="navbar pl-1 pr-4 md:px-6">
