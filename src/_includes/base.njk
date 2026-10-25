@@ -99,7 +99,7 @@
         <div class="navbar-start md:hidden">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn"><i class="bx bx-menu bx-sm"></i></div>
-            <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-300 rounded-box w-52 border border-gray-300">
+            <ul tabindex="0" class="menu dropdown-content z-1 p-2 shadow-sm bg-base-300 rounded-box w-52 border border-gray-300">
             {% for menuItem in menuItems %}
               <li>
                 {% if(page.url === menuItem.link) %}
@@ -139,7 +139,7 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="flex-grow flex justify-center">
+    <main class="grow flex justify-center">
       {# Responsive width: 10/12 mobile+tablet | 11/12 desktop #}
       <div id="main-container" class="w-10/12 xl:w-11/12 pt-4 pb-6 md:pt-6 md:pb-8">
         {% if pageHeader %}
