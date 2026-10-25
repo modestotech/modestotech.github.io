@@ -18,8 +18,18 @@ function handleBeforePrint() {
   const fullName = document.querySelector('meta[name="author"]').content;
   document.title = `${fullName} - Resume (printed ${formattedDate})`;
 
+  // Always print in light mode: dark mode would give light text on a dark (or white) page.
+  // Only the page is switched, not the saved preference, so it's restored after printing.
+  const previousTheme = document.documentElement.getAttribute("data-theme");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.setAttribute("data-theme", "light");
+
   window.addEventListener(
-    "afterprint", () => { document.title = previousTitle; }, { once: true }
+    "afterprint", () => {
+      document.title = previousTitle;
+      document.documentElement.classList.toggle("dark", previousTheme === "dark");
+      document.documentElement.setAttribute("data-theme", previousTheme);
+    }, { once: true }
   );
 }
 
