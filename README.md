@@ -25,7 +25,7 @@ Pushing to `main` builds, tests and deploys via `.github/workflows/build-and-dep
 
 ## Analytics: GoatCounter
 
-[GoatCounter](https://www.goatcounter.com/) is a privacy-friendly, EU-hosted analytics service. It counts page views without cookies: a visitor is recognised only by a non-reversible hash of IP + browser that rotates daily, so nothing is stored on their device and nobody can be tracked across days or sites. That's why the site has no cookie banner, and it avoids the GDPR problems Google Analytics has had in Sweden.
+[GoatCounter](https://www.goatcounter.com/) is a privacy-friendly, EU-hosted analytics service. It counts page views without cookies: a visitor is recognized only by a non-reversible hash of IP + browser that rotates daily, so nothing is stored on their device and nobody can be tracked across days or sites. That's why the site has no cookie banner, and it avoids the GDPR problems Google Analytics has had in Sweden.
 
 Dashboard: <https://modestosoftware.goatcounter.com>. The script tag and its CSP entries are in `src/_includes/base.njk`.
 
