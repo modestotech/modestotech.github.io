@@ -7,22 +7,22 @@ layout: base.njk
 <div id="contact-section" class="hidden mx-2 pb-3 mb-2">
     <div id="contact-container" class="flex flex-row flex-wrap gap-y-1 w-full">
         <!-- Email -->
-        <div class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
+        <div data-contact="email" class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
             <i class="bx bxs-envelope bx-sm"></i>
         </div>
 
         <!-- LinkedIn -->
-        <div class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
+        <div data-contact="linkedin" class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
             <i class="bx bxl-linkedin bx-sm"></i>
         </div>
 
         <!-- Github -->
-        <div class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
+        <div data-contact="github" class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
             <i class="bx bxl-github bx-sm"></i>
         </div>
 
         <!-- Phone -->
-        <div class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
+        <div data-contact="phone" class="flex items-center space-x-2 w-1/2 shrink-0 min-w-0">
             <i class="bx bxs-phone bx-sm"></i>
         </div>
 
@@ -34,7 +34,6 @@ layout: base.njk
         <div class="text-base space-y-4">{{ content | safe }}</div>
     </div>
     <div class="flex flex-col items-center ml-5">
-        <img src="/images/modesto_software_logo_for_light_mode.webp" alt="Modesto Software Logo" id="resume-logo" class="hidden w-24 h-auto"/>
         <div id="profile-image-container" class="avatar hidden sm:block">
             <div class="ring-3 ring-primary
                         ring-offset-2 ring-offset-base-100

@@ -79,8 +79,19 @@
 /* --- Attribute Lists (Achievements & Skills) --- */
 
 .attribute-list {
-  /* Flex container that allows wrapping and forces bullets inside the columns */
-  @apply flex flex-wrap list-disc list-inside p-0;
+  /* Flex container that allows wrapping */
+  @apply flex flex-wrap list-none p-0;
+}
+
+/* Each item draws its own bullet in its left padding. This keeps the bullet inside its
+   column, and lines that wrap start under the text instead of under the bullet. */
+.attribute-list > li {
+  @apply relative pl-5;
+}
+
+.attribute-list > li::before {
+  content: "•";
+  @apply absolute left-1.5;
 }
 
 /* Metadata styling (Org, Date, URL) */
