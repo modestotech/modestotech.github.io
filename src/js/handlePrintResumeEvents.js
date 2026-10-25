@@ -25,10 +25,6 @@ function handleBeforePrint() {
   );
 }
 
-// The contact icons only show up when printing, so the browser wouldn't download the icon font
-// until then - too late, and they print as empty boxes. Start loading it now instead.
-document.fonts.load("1em boxicons");
-
 window.addEventListener("beforeprint", handleBeforePrint);
 
 document

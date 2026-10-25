@@ -9,10 +9,10 @@ Personal site for Modesto Software: landing page, resume and contact page.
 Node version is set in `.nvmrc` (used by CI too; run `nvm use` locally).
 
 ```sh
-npm ci        # install
-npm run dev   # local server with live reload
-npm test      # spell check + build + sanity tests (test/)
-npm run spellcheck  # spell check only
+npm ci --ignore-scripts  # install (without running packages' install scripts, like CI)
+npm run dev              # local server with live reload
+npm test                 # spell check + build + sanity tests (test/)
+npm run spellcheck       # spell check only
 ```
 
 Pull requests to `main` are built and tested by `.github/workflows/ci.yml`; pushing to `main` builds, tests and deploys via `.github/workflows/deploy.yml`.
@@ -26,6 +26,7 @@ Spell check uses [cspell](https://cspell.org/) on the site content and this READ
 - `src/_data/resumeData.json` – resume content
 - `src/js/utils/contactUtils.js` – contact details (base64-encoded)
 - `src/_includes/` – layouts
+- `src/_includes/icons/` – inline SVG icons, copied from [Boxicons](https://boxicons.com/) (MIT)
 - `.github/dependabot.yml` – Dependabot config
 
 ## Analytics: GoatCounter
@@ -36,4 +37,4 @@ Dashboard: <https://modestosoftware.goatcounter.com>. The script tag and its CSP
 
 ## Dependency updates: Dependabot
 
-[Dependabot](https://docs.github.com/en/code-security/dependabot) is GitHub's built-in bot that opens PRs when npm packages or GitHub Actions have new versions. It keeps dependencies patched without manual checking. The workflow pins actions to commit SHAs (so a hijacked version tag can't push code to the site), and Dependabot is what keeps those pins up to date.
+[Dependabot](https://docs.github.com/en/code-security/dependabot) is GitHub's built-in bot that opens PRs when npm packages or GitHub Actions have new versions. It keeps dependencies patched without manual checking. The workflow pins actions to commit SHAs (so a hijacked version tag can't push code to the site), and Dependabot is what keeps those pins up to date. CI installs with `npm ci --ignore-scripts`, so a hijacked npm package can't run code just by being installed.

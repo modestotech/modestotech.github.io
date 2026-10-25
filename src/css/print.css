@@ -26,11 +26,6 @@
         gap: 2mm;
     }
 
-    #contact-container > div i {
-        width: 5mm;
-        text-align: center;
-    }
-
     /* 3. Page layout */
     #main-container {
         width: 100%;
