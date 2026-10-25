@@ -4,10 +4,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/js");
   eleventyConfig.addPassthroughCopy("./src/css/print.css", "css/print.css");
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/boxicons/css/boxicons.min.css" : "css/boxicons.min.css",
-    "node_modules/boxicons/fonts/" : "fonts/"
-  });
   eleventyConfig.addPassthroughCopy({ "./src/favicons" : "/"});
   eleventyConfig.addPassthroughCopy({ "./src/favicons/modesto_software_favicon_for_light_mode.ico" : "/favicon.ico"});
   eleventyConfig.addPassthroughCopy({ "./src/robots.txt" : "/robots.txt"});

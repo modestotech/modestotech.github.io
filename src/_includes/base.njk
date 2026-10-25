@@ -53,7 +53,6 @@
 
     <link href="/output.css" rel="stylesheet">
     <link href="/css/print.css" rel="stylesheet" media="print"/>
-    <link href="/css/boxicons.min.css" rel="stylesheet">
 
     {% if css %}
     <link rel="stylesheet" href="{{css}}" />
@@ -98,7 +97,7 @@
         <!-- Mobile menu -->
         <div class="navbar-start md:hidden">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="btn"><i class="bx bx-menu bx-sm"></i></div>
+            <div tabindex="0" role="button" class="btn">{% include "icons/menu.svg" %}</div>
             <ul tabindex="0" class="menu dropdown-content z-1 p-2 shadow-sm bg-base-300 rounded-box w-52 border border-gray-300">
             {% for menuItem in menuItems %}
               <li>
