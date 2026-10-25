@@ -1,16 +1,7 @@
-import { getContactLinkElements, appendIfNotExists } from "./utils/contactUtils.js";
+import { fillContactLinks } from "./utils/contactUtils.js";
 
 function handleBeforePrint() {
-  const container = document.querySelector("#contact-container");
-
-  var linkElements = getContactLinkElements();
-
-  if (linkElements) {
-    appendIfNotExists(container.children[0], linkElements.emailElement);
-    appendIfNotExists(container.children[1], linkElements.linkedinElement);
-    appendIfNotExists(container.children[2], linkElements.githubElement);
-    appendIfNotExists(container.children[3], linkElements.phoneElement);
-  }
+  fillContactLinks();
 
   const previousTitle = document.title;
   var now = new Date();

@@ -68,3 +68,10 @@ test("local links and assets resolve", () => {
     }
   }
 });
+
+test("resume and contact have every contact slot", () => {
+  for (const page of ["resume/index.html", "contact/index.html"]) {
+    const slots = [...read(page).matchAll(/data-contact="(\w+)"/g)].map((m) => m[1]).sort();
+    assert.deepStrictEqual(slots, ["email", "github", "linkedin", "phone"], page);
+  }
+});
