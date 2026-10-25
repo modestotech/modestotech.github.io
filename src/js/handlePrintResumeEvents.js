@@ -15,7 +15,8 @@ function handleBeforePrint() {
   const previousTitle = document.title;
   var now = new Date();
   var formattedDate = now.toISOString().split("T")[0];
-  document.title = `Max Modesto Wallin - Resume (printed ${formattedDate})`;
+  const fullName = document.querySelector('meta[name="author"]').content;
+  document.title = `${fullName} - Resume (printed ${formattedDate})`;
 
   window.addEventListener(
     "afterprint", () => { document.title = previousTitle; }, { once: true }
