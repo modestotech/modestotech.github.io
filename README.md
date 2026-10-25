@@ -26,6 +26,7 @@ Spell check uses [cspell](https://cspell.org/) on the site content and this READ
 - `src/_data/resumeData.json` – resume content
 - `src/js/utils/contactUtils.js` – contact details (base64-encoded)
 - `src/_includes/` – layouts
+- `src/_includes/icons/` – inline SVG icons, copied from [Boxicons](https://boxicons.com/) (MIT)
 - `.github/dependabot.yml` – Dependabot config
 
 ## Analytics: GoatCounter

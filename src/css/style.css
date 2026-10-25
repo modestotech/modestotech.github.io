@@ -16,6 +16,13 @@
   }
 }
 
+/* Inline SVG icons (src/_includes/icons, from Boxicons) */
+.icon {
+  width: 1.55rem;
+  height: 1.55rem;
+  flex-shrink: 0;
+}
+
 /* In dark mode, draw the theme toggle as "on" from the start.
    Otherwise it shows "off" for a moment and slides over once the JavaScript runs.
    These are the same settings DaisyUI uses for a toggle that is on. */
