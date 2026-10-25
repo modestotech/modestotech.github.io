@@ -21,6 +21,9 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:image" content="{{ site.url }}{{ image or '/images/profile-2024.png' }}">
     <meta name="twitter:card" content="summary">
+    {% if page.url === "/" %}
+    {% include "jsonLd.njk" %}
+    {% endif %}
     {% if noindex %}
     <meta name="robots" content="noindex">
     {% endif %}

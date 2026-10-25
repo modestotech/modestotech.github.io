@@ -1,0 +1,14 @@
+{#- Structured data for search engines. Email and phone are left out on purpose, see contactUtils.js -#}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": site.fullName,
+  "jobTitle": site.title,
+  "url": site.url + "/",
+  "image": site.url + "/images/profile-2024.png",
+  "address": { "@type": "PostalAddress", "addressLocality": "Helsingborg", "addressCountry": "SE" },
+  "sameAs": site.profiles,
+  "worksFor": { "@type": "Organization", "name": "Modesto Software AB", "url": site.url + "/" }
+} | dump(2) | safe }}
+</script>

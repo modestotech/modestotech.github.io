@@ -66,6 +66,14 @@ test("start page has Open Graph tags with absolute image URL", () => {
   assert.match(html, /<meta property="og:image" content="https:\/\/[^"]+\.(png|jpe?g|webp)">/);
 });
 
+test("start page has valid Person structured data", () => {
+  const json = read("index.html").match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
+  const data = JSON.parse(json);
+  assert.strictEqual(data["@type"], "Person");
+  assert.strictEqual(data.name, "Max Modesto Wallin");
+  assert.strictEqual(data.sameAs.length, 2);
+});
+
 test("local links and assets resolve", () => {
   for (const page of pages) {
     const urls = [...read(page).matchAll(/(?:src|href)="(\/[^"]*)"/g)].map((m) => m[1]);
