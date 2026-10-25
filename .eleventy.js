@@ -1,3 +1,5 @@
+const site = require("./src/_data/site.json");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/js");
@@ -13,9 +15,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/robots.txt" : "/robots.txt"});
 
   eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
-  eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - 2017);
-  eleventyConfig.addShortcode("fullName", () => "Max Modesto Wallin");
-  eleventyConfig.addShortcode("title", () => "Senior System Developer");
+  eleventyConfig.addShortcode("yearsOfExperience", () => new Date().getFullYear() - site.careerStart);
+  eleventyConfig.addShortcode("fullName", () => site.fullName);
+  eleventyConfig.addShortcode("title", () => site.title);
   
   return {
     dir: {

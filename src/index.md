@@ -1,7 +1,8 @@
 ---
 metaDescription: "Consultant and software developer Max Modesto Wallin in Helsingborg, Sweden. Specializing in .NET and Azure for expert software solutions."
 image: "/images/profile-2024.png"
-imageAlt: "Max Modesto Wallin profile picture"
+eleventyComputed:
+  imageAlt: "{{ site.fullName }} profile picture"
 layout: start.njk
 ---
 

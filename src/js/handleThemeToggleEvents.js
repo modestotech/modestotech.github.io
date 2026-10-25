@@ -59,8 +59,8 @@ function updateLogo(theme) {
   const logo = document.getElementById("navbar-logo");
   logo.classList.add("hidden");
   var logoResource = theme === darkThemeName
-    ? "/images/modesto_software_logo_for_dark_mode.png"
-    : "/images/modesto_software_logo_for_light_mode.png";
+    ? "/images/modesto_software_logo_for_dark_mode.webp"
+    : "/images/modesto_software_logo_for_light_mode.webp";
   logo.setAttribute("src", logoResource);
   logo.classList.remove("hidden");
 }

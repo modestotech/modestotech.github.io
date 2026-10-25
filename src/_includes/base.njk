@@ -11,14 +11,17 @@
     {% endif %}
 
     <meta name="description" content="{{metaDescription}}">
+    <meta name="author" content="{{ site.fullName }}">
+    {% if noindex %}
+    <meta name="robots" content="noindex">
+    {% endif %}
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' https://www.googletagmanager.com;
       connect-src 'self' https://*.google-analytics.com;
       img-src 'self' https://www.googletagmanager.com;
-      frame-src https://www.google.com https://www.gstatic.com;
-      font-src 'self' https://fonts.gstatic.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self';
+      style-src 'self' 'unsafe-inline';
       object-src 'none';
       base-uri 'self';
       form-action 'self';
@@ -62,8 +65,8 @@
     {% endfor %}
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
-    <script src="/js/analytics.js"></script>
+    <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-Z0NSCWVSKK"></script>
+    <script type="text/plain" data-category="analytics" src="/js/analytics.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
     <script type="module" src="/js/cookieconsentConfig.js"></script>
