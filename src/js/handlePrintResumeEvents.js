@@ -4,8 +4,9 @@ function handleBeforePrint() {
   fillContactLinks();
 
   const previousTitle = document.title;
-  var now = new Date();
-  var formattedDate = now.toISOString().split("T")[0];
+  // Local date as YYYY-MM-DD (the Swedish locale happens to use that format).
+  // toISOString() would give the UTC date, which is yesterday just after midnight in Sweden.
+  const formattedDate = new Date().toLocaleDateString("sv-SE");
   const fullName = document.querySelector('meta[name="author"]').content;
   document.title = `${fullName} - Resume (printed ${formattedDate})`;
 
