@@ -1,19 +1,10 @@
 @media print {
-    /* 1. Visibility and Layout Resets */
-    header, footer, .ad-banner, #cc-main, #print-button, .certificate-link {
+    /* 1. Hide what doesn't belong on paper */
+    header, footer, #print-button, .certificate-link {
         display: none !important;
     }
 
-    #resume-logo {
-        display: none;
-        
-        /* Turned off */
-        /* display: block;
-        position: absolute;
-        top: 3mm;
-        right: 2mm; */
-    }
-
+    /* 2. Contact details (hidden on screen, shown at the top when printed) */
     #contact-section {
         display: flex;
         align-items: center;
@@ -40,59 +31,49 @@
         text-align: center;
     }
 
+    /* 3. Page layout */
     #main-container {
         width: 100%;
         margin: 0;
         padding: 0;
     }
 
-    #main-container > *:nth-child(n+3):not(:last-child) {
+    /* Divider lines between the blocks of the resume */
+    #contact-section,
+    #resume-intro-section,
+    .resume-section:not(:last-child) {
         border-bottom: 0.5mm solid black;
     }
 
-    /* 2. Typography and Spacing */
-    #main-container h1 {
-        display: block !important;
-        margin: 0 !important;
-        padding-bottom: 0.5mm !important;
+    #profile-image-container {
+        margin-left: 0.5cm;
+        margin-right: 0.2cm;
+    }
+
+    /* 4. Headings: never split, and keep them on the same page as what follows */
+    #main-container h1,
+    #main-container h2,
+    #main-container h3,
+    #main-container h4 {
         break-after: avoid;
-        break-inside: avoid; /* NEW: prevents the heading itself from splitting */
+        break-inside: avoid;
+    }
+
+    #main-container h1 {
+        margin: 0;
+        padding-bottom: 0.5mm;
     }
 
     #main-container h2 {
-        display: block !important;
-        margin: 0 !important;
-        padding-bottom: 3mm !important;
-        break-after: avoid;
-        break-inside: avoid; /* NEW */
+        margin: 0;
+        padding-bottom: 3mm;
     }
 
-    #main-container > h2 {
-        padding-bottom: 3mm !important;
-    }
-    
-    #main-container h3 {
-        break-after: avoid;
-        break-inside: avoid; /* NEW */
-    }
-
-    #main-container h4 {
-        break-after: avoid;
-        break-inside: avoid; /* NEW */
-    }
-
+    /* 5. Sections and cards */
     .resume-section {
-        display: block !important;
         margin: 0.6cm 0 0 0;
     }
 
-    .experience-sub-header {
-        margin: 0;
-        break-after: avoid;       /* NEW: binds sub-header to what follows */
-        break-inside: avoid;      /* NEW */
-    }
-
-    /* 3. Card Styling for Print */
     .resume-card {
         all: unset;
         display: block;
@@ -101,9 +82,8 @@
     }
 
     .resume-section .resume-card:not(:last-child) {
-            border-bottom: 0.3mm solid grey;
+        border-bottom: 0.3mm solid grey;
     }
-
 
     .resume-card .card-body {
         padding: 0;
@@ -116,51 +96,28 @@
         break-after: avoid;
     }
 
-    .certificate-link {
-        display: none;
-    }
-
     .card-section {
         break-inside: avoid;
     }
 
-    /* 4. Grid Logic for Paper (A4/Letter) */
+    /* 6. Lists: fixed column counts for paper instead of the screen breakpoints */
     .attribute-list {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        list-style-type: disc !important;
-        break-inside: avoid; /* NEW: keeps skill/attribute lists from splitting mid-row */
+        break-inside: avoid;
     }
 
-    /* Big: Always 1 col */
     .attribute-list .big {
-        width: 100% !important;
-        margin-bottom: 1mm !important;
+        width: 100%;
+        margin-bottom: 1mm;
     }
 
-    /* Medium: 2 cols for print */
     .attribute-list .medium {
-        width: 50% !important;
-        margin-bottom: 1mm !important;
+        width: 50%;
+        margin-bottom: 1mm;
     }
 
-    /* Small: 3 cols for print */
     .attribute-list .small {
-        width: 33.3333% !important;
-        margin-bottom: 1mm !important;
+        width: 33.3333%;
+        margin-bottom: 1mm;
         font-size: 0.9em;
-    }
-
-    /* Ensure metadata (Org, Date) spreads out on paper */
-    .flex-wrap.justify-between {
-        display: flex !important;
-        justify-content: space-between !important;
-        width: 100% !important;
-        break-after: avoid; /* NEW: binds this metadata row to the content below it */
-    }
-
-    #profile-image-container {
-        margin-left: 0.5cm;
-        margin-right: 0.2cm;
     }
 }
