@@ -5,6 +5,9 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -16,12 +19,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - name: Build
-        working-directory: './src'
+          node-version: 22
+      - name: Build and test
         run: |
-          npm i
-          npm run build
+          npm ci
+          npm test
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
