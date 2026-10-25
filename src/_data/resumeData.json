@@ -52,12 +52,12 @@
       },
       "responsibilities": [
         "Work with, among other, these Azure components: Container Apps, API Management (APIM), Storage Account, ServiceBus, Keyvault, Container Registry",
-        "Extensive work in BizTalk 2020, maintainging legacy integrations and re-implementations in Azure",
+        "Extensive work in BizTalk 2020, maintaining legacy integrations and re-implementations in Azure",
         "Detailing and designing architectural solutions in co-operation with stakeholders",
         "Maintaining and developing .NET API hosted in Azure, consuming data from Dynamics CRM", 
         "Secure cloud authentication and authorization with managed identities",
         "CI/CD development in Azure Devops YAML pipelines",
-        "Infrastructura as Code development for Azure with bicep"
+        "Infrastructure as Code development for Azure with bicep"
       ],
       "achievements": [
         "Played a critical role in the migration of 30% of legacy BizTalk integrations to Azure, ensuring project success through high-level technical execution.",
@@ -138,8 +138,8 @@
         "country": "Sweden"
       },
       "responsibilities": [
-        "Development on Inyet's SaaS solution for scanning and analyzing payments, to detect faults, frauds etc.",
-        "Mostly work on the BE parts (.NET/SQL) and and some limited FE work (AngularJS)",
+        "Development on Inyett's SaaS solution for scanning and analyzing payments, to detect faults, frauds etc.",
+        "Mostly work on the BE parts (.NET/SQL) and some limited FE work (AngularJS)",
         "Introducing Scrum to the organization as the Scrum Master",
         "Setting up and maintaining CI/CD with TeamCity and Octopus"
       ],
