@@ -53,6 +53,12 @@ test("resume and contact are noindex", () => {
   assert.doesNotMatch(read("index.html"), /name="robots"/);
 });
 
+test("sitemap lists the start page but no noindex pages", () => {
+  const locs = [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  assert.deepStrictEqual(locs, ["https://modestosoftware.com/"]);
+  assert.match(read("robots.txt"), /^Sitemap: https:\/\/modestosoftware\.com\/sitemap\.xml$/m);
+});
+
 test("start page has Open Graph tags with absolute image URL", () => {
   const html = read("index.html");
   assert.match(html, /<meta property="og:title" content="[^"]+">/);
