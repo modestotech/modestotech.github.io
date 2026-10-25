@@ -6,6 +6,8 @@ Personal site for Modesto Software: landing page, resume and contact page.
 
 ## Develop
 
+Node version is set in `.nvmrc` (used by CI too; run `nvm use` locally).
+
 ```sh
 npm ci        # install
 npm run dev   # local server with live reload
