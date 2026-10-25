@@ -6,10 +6,6 @@ const lightThemeName = "light";
 const darkThemeName = "dark";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggleContainer = document.getElementById(
-    "theme-toggle-container"
-  );
-
   var theme = getCurrentTheme();
 
   if (theme === darkThemeName) {
@@ -18,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     enableLightMode();
   }
-
-  // Remove the hidden class to display the toggle and logo
-  themeToggleContainer.classList.remove("hidden");
 });
 
 themeToggle.addEventListener("change", function () {
@@ -38,7 +31,6 @@ function enableLightMode() {
   document.documentElement.setAttribute("data-theme", lightThemeName);
 
   persistTheme(lightThemeName);
-  updateLogo(lightThemeName);
   setMetaTags(lightThemeName);
 }
 
@@ -47,22 +39,11 @@ function enableDarkMode() {
   document.documentElement.setAttribute("data-theme", darkThemeName);
 
   persistTheme(darkThemeName);
-  updateLogo(darkThemeName);
   setMetaTags(darkThemeName);
 }
 
 function persistTheme(theme) {
   localStorage.setItem("theme", theme);
-}
-
-function updateLogo(theme) {
-  const logo = document.getElementById("navbar-logo");
-  logo.classList.add("hidden");
-  var logoResource = theme === darkThemeName
-    ? "/images/modesto_software_logo_for_dark_mode.webp"
-    : "/images/modesto_software_logo_for_light_mode.webp";
-  logo.setAttribute("src", logoResource);
-  logo.classList.remove("hidden");
 }
 
 function setMetaTags(theme) {

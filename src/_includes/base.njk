@@ -40,6 +40,8 @@
     <link rel="icon" href="/modesto_software_favicon_for_light_mode.ico" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/modesto_software_favicon_for_dark_mode.ico" media="(prefers-color-scheme: dark)">
 
+    <script src="/js/initTheme.js"></script>
+
     <link href="/output.css" rel="stylesheet">
     <link href="/css/print.css" rel="stylesheet" media="print"/>
     <link href="/css/boxicons.min.css" rel="stylesheet">
@@ -103,7 +105,7 @@
         </div>
 
         <!-- Theme toggle and logo -->
-        <div class="navbar-end hidden" id="theme-toggle-container">
+        <div class="navbar-end">
           <div class="flex items-center space-x-3 md:space-x-6">
             <!-- Theme Toggle -->
             <label for="theme-toggle" class="sr-only">Toggle Theme</label>
@@ -112,11 +114,13 @@
             <!-- Company Logo -->
             {% if(page.url === "/") %}
             <div class="flex items-center">
-              <img src="" alt="Company Logo" id="navbar-logo" class="w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_light_mode.webp" alt="Company Logo" class="dark:hidden w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_dark_mode.webp" alt="Company Logo" class="hidden dark:block w-10 md:w-14 h-auto"/>
             </div>
             {% else %}
             <a href="/" class="flex items-center">
-              <img src="" alt="Company Logo" id="navbar-logo" class="w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_light_mode.webp" alt="Company Logo" class="dark:hidden w-10 md:w-14 h-auto"/>
+              <img src="/images/modesto_software_logo_for_dark_mode.webp" alt="Company Logo" class="hidden dark:block w-10 md:w-14 h-auto"/>
             </a>
             {% endif %}
           </div>
