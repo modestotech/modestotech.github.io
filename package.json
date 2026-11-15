@@ -13,13 +13,13 @@
   "author": "Max Modesto Wallin",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.7"
+    "@11ty/eleventy": "^3.1.8"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/cli": "^4.3.5",
     "@tailwindcss/typography": "^0.5.20",
-    "concurrently": "^10.0.6",
-    "cspell": "^10.4.0",
+    "concurrently": "^10.0.7",
+    "cspell": "^10.4.1",
     "daisyui": "^5.7.50",
     "tailwindcss": "^4.3.3"
   }
